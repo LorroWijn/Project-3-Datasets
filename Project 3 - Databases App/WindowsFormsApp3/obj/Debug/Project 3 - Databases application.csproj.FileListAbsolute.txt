@@ -1,0 +1,12 @@
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\Project 3 - Databases application.csprojResolveAssemblyReference.cache
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.HoofdschermForm.resources
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\Project 3 - Databases application.csproj.GenerateResource.cache
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Database for project 3 - Databases.mdf
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Database for project 3 - Databases_log.ldf
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\Project 3 - Databases application.csproj.CoreCompileInputs.cache
