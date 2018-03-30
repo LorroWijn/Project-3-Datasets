@@ -18,6 +18,11 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
+        private void eenNaampje_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void UpdateGrid(string misdrijf)
         {
             SqlConnection dbConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf;Integrated Security=True");
@@ -26,7 +31,7 @@ namespace WindowsFormsApp3
                                                         FROM crimi as c, provincie as p, misdrijf as m
                                                         WHERE c.prov_id = p.prov_id
                                                         AND c.misdrijf_id = m.misdrijf_id
-                                                        AND c.periode LIKE '2010%'
+                                                        AND c.periode LIKE '2015%'
                                                         AND level = 'B'
                                                         AND m.misdrijf_naam LIKE '" + misdrijf + "%'", dbConnection);
             SqlDataReader reader = queryMisdaden.ExecuteReader();
@@ -34,6 +39,21 @@ namespace WindowsFormsApp3
             table.Load(reader);
             eenNaampje.DataSource = table;
 
+        }
+
+        private void UpdateGridEthniciteit(string meegegevenEthiniciteit)
+        {
+            SqlConnection dbConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf;Integrated Security=True");
+            dbConnection.Open();
+            SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY a." + meegegevenEthiniciteit + " DESC, p.prov_naam), a." + meegegevenEthiniciteit + @", p.prov_naam
+                                                                        FROM afkomst as a, provincie as p
+                                                                        WHERE a.periode LIKE '2015%'
+                                                                        AND p.prov_id = a.prov_id
+                                                                        ORDER BY a.autoch DESC", dbConnection);
+            SqlDataReader reader = queryMisdaden.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+            EthniciteitGrid.DataSource = table;
         }
 
         private void AlleMisdrijven_CheckedChanged(object sender, EventArgs e)
@@ -44,7 +64,7 @@ namespace WindowsFormsApp3
                                                                     FROM misdrijf as m, provincie as p, crimi as c
                                                                     WHERE m.misdrijf_id = c.misdrijf_id
                                                                     AND p.prov_id = c.prov_id
-                                                                    AND c.periode LIKE '2010%'
+                                                                    AND c.periode LIKE '2015%'
                                                                     AND m.misdrijf_id = '0'", dbConnection);
             SqlDataReader reader = queryMisdaden.ExecuteReader();
             DataTable table = new DataTable();
@@ -101,9 +121,32 @@ namespace WindowsFormsApp3
             UpdateGrid(misdrijf);
         }
 
-        private void eenNaampje_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        //------------------------------------------------------------------------------------------
 
+        private void autochtonen_CheckedChanged(object sender, EventArgs e)
+        {
+            string Ethnicity = "autoch";
+            UpdateGridEthniciteit(Ethnicity);
         }
+        
+        private void totAllochtonen_CheckedChanged(object sender, EventArgs e)
+        {
+            string Ethnicity = "tot_alloch";
+            UpdateGridEthniciteit(Ethnicity);
+        }
+
+        private void westAllochtonen_CheckedChanged(object sender, EventArgs e)
+        {
+            string Ethnicity = "w_alloch";
+            UpdateGridEthniciteit(Ethnicity);
+        }
+
+        private void nonWestAllochtonen_CheckedChanged(object sender, EventArgs e)
+        {
+            string Ethnicity = "nw_alloch";
+            UpdateGridEthniciteit(Ethnicity);
+        }
+
+
     }
 }

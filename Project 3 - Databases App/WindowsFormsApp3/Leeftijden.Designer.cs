@@ -39,8 +39,21 @@
             this.WvSr = new System.Windows.Forms.RadioButton();
             this.Verkeer = new System.Windows.Forms.RadioButton();
             this.eenNaampje = new System.Windows.Forms.DataGridView();
+            this.groupBoxLeeftijden = new System.Windows.Forms.GroupBox();
+            this.xJongerDan5 = new System.Windows.Forms.RadioButton();
+            this.x5tot10 = new System.Windows.Forms.RadioButton();
+            this.x10tot15 = new System.Windows.Forms.RadioButton();
+            this.x15tot20 = new System.Windows.Forms.RadioButton();
+            this.x20tot25 = new System.Windows.Forms.RadioButton();
+            this.x45tot65 = new System.Windows.Forms.RadioButton();
+            this.x65tot80 = new System.Windows.Forms.RadioButton();
+            this.xOuderDan80 = new System.Windows.Forms.RadioButton();
+            this.x25tot45 = new System.Windows.Forms.RadioButton();
+            this.LeefijdGrid = new System.Windows.Forms.DataGridView();
             this.groupBoxCrimi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eenNaampje)).BeginInit();
+            this.groupBoxLeeftijden.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeefijdGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxCrimi
@@ -178,11 +191,148 @@
             this.eenNaampje.TabIndex = 21;
             this.eenNaampje.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.eenNaampje_CellContentClick);
             // 
+            // groupBoxLeeftijden
+            // 
+            this.groupBoxLeeftijden.Controls.Add(this.x25tot45);
+            this.groupBoxLeeftijden.Controls.Add(this.xOuderDan80);
+            this.groupBoxLeeftijden.Controls.Add(this.x65tot80);
+            this.groupBoxLeeftijden.Controls.Add(this.x45tot65);
+            this.groupBoxLeeftijden.Controls.Add(this.x20tot25);
+            this.groupBoxLeeftijden.Controls.Add(this.x15tot20);
+            this.groupBoxLeeftijden.Controls.Add(this.x10tot15);
+            this.groupBoxLeeftijden.Controls.Add(this.x5tot10);
+            this.groupBoxLeeftijden.Controls.Add(this.xJongerDan5);
+            this.groupBoxLeeftijden.Location = new System.Drawing.Point(1364, 63);
+            this.groupBoxLeeftijden.Name = "groupBoxLeeftijden";
+            this.groupBoxLeeftijden.Size = new System.Drawing.Size(200, 298);
+            this.groupBoxLeeftijden.TabIndex = 23;
+            this.groupBoxLeeftijden.TabStop = false;
+            this.groupBoxLeeftijden.Text = "Leeftijden";
+            // 
+            // xJongerDan5
+            // 
+            this.xJongerDan5.AutoSize = true;
+            this.xJongerDan5.Location = new System.Drawing.Point(6, 29);
+            this.xJongerDan5.Name = "xJongerDan5";
+            this.xJongerDan5.Size = new System.Drawing.Size(107, 17);
+            this.xJongerDan5.TabIndex = 0;
+            this.xJongerDan5.TabStop = true;
+            this.xJongerDan5.Text = "Jonger dan 5 jaar";
+            this.xJongerDan5.UseVisualStyleBackColor = true;
+            this.xJongerDan5.CheckedChanged += new System.EventHandler(this.xJongerDan5_CheckedChanged);
+            // 
+            // x5tot10
+            // 
+            this.x5tot10.AutoSize = true;
+            this.x5tot10.Location = new System.Drawing.Point(6, 52);
+            this.x5tot10.Name = "x5tot10";
+            this.x5tot10.Size = new System.Drawing.Size(102, 17);
+            this.x5tot10.TabIndex = 1;
+            this.x5tot10.TabStop = true;
+            this.x5tot10.Text = "van 5 tot 10 jaar";
+            this.x5tot10.UseVisualStyleBackColor = true;
+            this.x5tot10.CheckedChanged += new System.EventHandler(this.x5tot10_CheckedChanged);
+            // 
+            // x10tot15
+            // 
+            this.x10tot15.AutoSize = true;
+            this.x10tot15.Location = new System.Drawing.Point(6, 75);
+            this.x10tot15.Name = "x10tot15";
+            this.x10tot15.Size = new System.Drawing.Size(108, 17);
+            this.x10tot15.TabIndex = 2;
+            this.x10tot15.TabStop = true;
+            this.x10tot15.Text = "van 10 tot 15 jaar";
+            this.x10tot15.UseVisualStyleBackColor = true;
+            this.x10tot15.CheckedChanged += new System.EventHandler(this.x10tot15_CheckedChanged);
+            // 
+            // x15tot20
+            // 
+            this.x15tot20.AutoSize = true;
+            this.x15tot20.Location = new System.Drawing.Point(6, 98);
+            this.x15tot20.Name = "x15tot20";
+            this.x15tot20.Size = new System.Drawing.Size(108, 17);
+            this.x15tot20.TabIndex = 3;
+            this.x15tot20.TabStop = true;
+            this.x15tot20.Text = "van 15 tot 20 jaar";
+            this.x15tot20.UseVisualStyleBackColor = true;
+            this.x15tot20.CheckedChanged += new System.EventHandler(this.x15tot20_CheckedChanged);
+            // 
+            // x20tot25
+            // 
+            this.x20tot25.AutoSize = true;
+            this.x20tot25.Location = new System.Drawing.Point(6, 121);
+            this.x20tot25.Name = "x20tot25";
+            this.x20tot25.Size = new System.Drawing.Size(108, 17);
+            this.x20tot25.TabIndex = 4;
+            this.x20tot25.TabStop = true;
+            this.x20tot25.Text = "van 20 tot 25 jaar";
+            this.x20tot25.UseVisualStyleBackColor = true;
+            this.x20tot25.CheckedChanged += new System.EventHandler(this.x20tot25_CheckedChanged);
+            // 
+            // x45tot65
+            // 
+            this.x45tot65.AutoSize = true;
+            this.x45tot65.Location = new System.Drawing.Point(6, 167);
+            this.x45tot65.Name = "x45tot65";
+            this.x45tot65.Size = new System.Drawing.Size(108, 17);
+            this.x45tot65.TabIndex = 5;
+            this.x45tot65.TabStop = true;
+            this.x45tot65.Text = "van 45 tot 65 jaar";
+            this.x45tot65.UseVisualStyleBackColor = true;
+            this.x45tot65.CheckedChanged += new System.EventHandler(this.x45tot65_CheckedChanged);
+            // 
+            // x65tot80
+            // 
+            this.x65tot80.AutoSize = true;
+            this.x65tot80.Location = new System.Drawing.Point(5, 190);
+            this.x65tot80.Name = "x65tot80";
+            this.x65tot80.Size = new System.Drawing.Size(108, 17);
+            this.x65tot80.TabIndex = 6;
+            this.x65tot80.TabStop = true;
+            this.x65tot80.Text = "van 65 tot 80 jaar";
+            this.x65tot80.UseVisualStyleBackColor = true;
+            this.x65tot80.CheckedChanged += new System.EventHandler(this.x65tot80_CheckedChanged);
+            // 
+            // xOuderDan80
+            // 
+            this.xOuderDan80.AutoSize = true;
+            this.xOuderDan80.Location = new System.Drawing.Point(5, 213);
+            this.xOuderDan80.Name = "xOuderDan80";
+            this.xOuderDan80.Size = new System.Drawing.Size(108, 17);
+            this.xOuderDan80.TabIndex = 7;
+            this.xOuderDan80.TabStop = true;
+            this.xOuderDan80.Text = "ouder dan 80 jaar";
+            this.xOuderDan80.UseVisualStyleBackColor = true;
+            this.xOuderDan80.CheckedChanged += new System.EventHandler(this.xOuderDan80_CheckedChanged);
+            // 
+            // x25tot45
+            // 
+            this.x25tot45.AutoSize = true;
+            this.x25tot45.Location = new System.Drawing.Point(6, 144);
+            this.x25tot45.Name = "x25tot45";
+            this.x25tot45.Size = new System.Drawing.Size(108, 17);
+            this.x25tot45.TabIndex = 8;
+            this.x25tot45.TabStop = true;
+            this.x25tot45.Text = "van 25 tot 45 jaar";
+            this.x25tot45.UseVisualStyleBackColor = true;
+            this.x25tot45.CheckedChanged += new System.EventHandler(this.x25tot45_CheckedChanged);
+            // 
+            // LeefijdGrid
+            // 
+            this.LeefijdGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LeefijdGrid.Location = new System.Drawing.Point(862, 47);
+            this.LeefijdGrid.Name = "LeefijdGrid";
+            this.LeefijdGrid.Size = new System.Drawing.Size(380, 421);
+            this.LeefijdGrid.TabIndex = 24;
+            this.LeefijdGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LeefijdGrid_CellContentClick);
+            // 
             // Leeftijden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.LeefijdGrid);
+            this.Controls.Add(this.groupBoxLeeftijden);
             this.Controls.Add(this.groupBoxCrimi);
             this.Controls.Add(this.eenNaampje);
             this.Name = "Leeftijden";
@@ -190,6 +340,9 @@
             this.groupBoxCrimi.ResumeLayout(false);
             this.groupBoxCrimi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eenNaampje)).EndInit();
+            this.groupBoxLeeftijden.ResumeLayout(false);
+            this.groupBoxLeeftijden.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeefijdGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,5 +360,16 @@
         private System.Windows.Forms.RadioButton WvSr;
         private System.Windows.Forms.RadioButton Verkeer;
         private System.Windows.Forms.DataGridView eenNaampje;
+        private System.Windows.Forms.GroupBox groupBoxLeeftijden;
+        private System.Windows.Forms.RadioButton x65tot80;
+        private System.Windows.Forms.RadioButton x45tot65;
+        private System.Windows.Forms.RadioButton x20tot25;
+        private System.Windows.Forms.RadioButton x15tot20;
+        private System.Windows.Forms.RadioButton x10tot15;
+        private System.Windows.Forms.RadioButton x5tot10;
+        private System.Windows.Forms.RadioButton xJongerDan5;
+        private System.Windows.Forms.RadioButton xOuderDan80;
+        private System.Windows.Forms.RadioButton x25tot45;
+        private System.Windows.Forms.DataGridView LeefijdGrid;
     }
 }

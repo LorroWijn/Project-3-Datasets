@@ -39,8 +39,16 @@
             this.WvSr = new System.Windows.Forms.RadioButton();
             this.Verkeer = new System.Windows.Forms.RadioButton();
             this.eenNaampje = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.autochtonen = new System.Windows.Forms.RadioButton();
+            this.totAllochtonen = new System.Windows.Forms.RadioButton();
+            this.westAllochtonen = new System.Windows.Forms.RadioButton();
+            this.nonWestAllochtonen = new System.Windows.Forms.RadioButton();
+            this.EthniciteitGrid = new System.Windows.Forms.DataGridView();
             this.groupBoxCrimi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eenNaampje)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EthniciteitGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxCrimi
@@ -177,11 +185,82 @@
             this.eenNaampje.TabIndex = 21;
             this.eenNaampje.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.eenNaampje_CellContentClick);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.nonWestAllochtonen);
+            this.groupBox1.Controls.Add(this.westAllochtonen);
+            this.groupBox1.Controls.Add(this.totAllochtonen);
+            this.groupBox1.Controls.Add(this.autochtonen);
+            this.groupBox1.Location = new System.Drawing.Point(1483, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 344);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // autochtonen
+            // 
+            this.autochtonen.AutoSize = true;
+            this.autochtonen.Location = new System.Drawing.Point(19, 31);
+            this.autochtonen.Name = "autochtonen";
+            this.autochtonen.Size = new System.Drawing.Size(86, 17);
+            this.autochtonen.TabIndex = 0;
+            this.autochtonen.TabStop = true;
+            this.autochtonen.Text = "Autochtonen";
+            this.autochtonen.UseVisualStyleBackColor = true;
+            this.autochtonen.CheckedChanged += new System.EventHandler(this.autochtonen_CheckedChanged);
+            // 
+            // totAllochtonen
+            // 
+            this.totAllochtonen.AutoSize = true;
+            this.totAllochtonen.Location = new System.Drawing.Point(19, 54);
+            this.totAllochtonen.Name = "totAllochtonen";
+            this.totAllochtonen.Size = new System.Drawing.Size(145, 17);
+            this.totAllochtonen.TabIndex = 1;
+            this.totAllochtonen.TabStop = true;
+            this.totAllochtonen.Text = "Totaal aantal allochtonen";
+            this.totAllochtonen.UseVisualStyleBackColor = true;
+            this.totAllochtonen.CheckedChanged += new System.EventHandler(this.totAllochtonen_CheckedChanged);
+            // 
+            // westAllochtonen
+            // 
+            this.westAllochtonen.AutoSize = true;
+            this.westAllochtonen.Location = new System.Drawing.Point(19, 77);
+            this.westAllochtonen.Name = "westAllochtonen";
+            this.westAllochtonen.Size = new System.Drawing.Size(128, 17);
+            this.westAllochtonen.TabIndex = 2;
+            this.westAllochtonen.TabStop = true;
+            this.westAllochtonen.Text = "Westerse allochtonen";
+            this.westAllochtonen.UseVisualStyleBackColor = true;
+            this.westAllochtonen.CheckedChanged += new System.EventHandler(this.westAllochtonen_CheckedChanged);
+            // 
+            // nonWestAllochtonen
+            // 
+            this.nonWestAllochtonen.AutoSize = true;
+            this.nonWestAllochtonen.Location = new System.Drawing.Point(19, 100);
+            this.nonWestAllochtonen.Name = "nonWestAllochtonen";
+            this.nonWestAllochtonen.Size = new System.Drawing.Size(147, 17);
+            this.nonWestAllochtonen.TabIndex = 3;
+            this.nonWestAllochtonen.TabStop = true;
+            this.nonWestAllochtonen.Text = "Niet westerse allochtonen";
+            this.nonWestAllochtonen.UseVisualStyleBackColor = true;
+            this.nonWestAllochtonen.CheckedChanged += new System.EventHandler(this.nonWestAllochtonen_CheckedChanged);
+            // 
+            // EthniciteitGrid
+            // 
+            this.EthniciteitGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EthniciteitGrid.Location = new System.Drawing.Point(886, 43);
+            this.EthniciteitGrid.Name = "EthniciteitGrid";
+            this.EthniciteitGrid.Size = new System.Drawing.Size(473, 421);
+            this.EthniciteitGrid.TabIndex = 24;
+            // 
             // Ethniciteit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1964, 981);
+            this.Controls.Add(this.EthniciteitGrid);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxCrimi);
             this.Controls.Add(this.eenNaampje);
             this.Name = "Ethniciteit";
@@ -189,6 +268,9 @@
             this.groupBoxCrimi.ResumeLayout(false);
             this.groupBoxCrimi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eenNaampje)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EthniciteitGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +288,11 @@
         private System.Windows.Forms.RadioButton WvSr;
         private System.Windows.Forms.RadioButton Verkeer;
         private System.Windows.Forms.DataGridView eenNaampje;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton nonWestAllochtonen;
+        private System.Windows.Forms.RadioButton westAllochtonen;
+        private System.Windows.Forms.RadioButton totAllochtonen;
+        private System.Windows.Forms.RadioButton autochtonen;
+        private System.Windows.Forms.DataGridView EthniciteitGrid;
     }
 }
