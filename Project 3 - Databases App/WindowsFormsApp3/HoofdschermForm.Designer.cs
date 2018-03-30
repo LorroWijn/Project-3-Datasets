@@ -33,11 +33,8 @@
             this.CrimiVSAfkomst = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.eenNaampje = new System.Windows.Forms.DataGridView();
-            this.misdrijfNamen = new System.Windows.Forms.DataGridView();
+            this.crimiVsLeeftijdKnop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eenNaampje)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.misdrijfNamen)).BeginInit();
             this.SuspendLayout();
             // 
             // database1DataSet
@@ -49,7 +46,7 @@
             // 
             this.CrimiVSGrond.BackColor = System.Drawing.SystemColors.Control;
             this.CrimiVSGrond.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.aceon6jBi;
-            this.CrimiVSGrond.Location = new System.Drawing.Point(1005, 487);
+            this.CrimiVSGrond.Location = new System.Drawing.Point(727, 487);
             this.CrimiVSGrond.Name = "CrimiVSGrond";
             this.CrimiVSGrond.Size = new System.Drawing.Size(512, 512);
             this.CrimiVSGrond.TabIndex = 0;
@@ -83,41 +80,30 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // eenNaampje
+            // crimiVsLeeftijdKnop
             // 
-            this.eenNaampje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.eenNaampje.Location = new System.Drawing.Point(171, 46);
-            this.eenNaampje.Name = "eenNaampje";
-            this.eenNaampje.Size = new System.Drawing.Size(453, 421);
-            this.eenNaampje.TabIndex = 4;
+            this.crimiVsLeeftijdKnop.Location = new System.Drawing.Point(1311, 496);
+            this.crimiVsLeeftijdKnop.Name = "crimiVsLeeftijdKnop";
+            this.crimiVsLeeftijdKnop.Size = new System.Drawing.Size(512, 512);
+            this.crimiVsLeeftijdKnop.TabIndex = 4;
+            this.crimiVsLeeftijdKnop.Text = "Criminaliteit versus Leeftijd";
+            this.crimiVsLeeftijdKnop.UseVisualStyleBackColor = true;
+            this.crimiVsLeeftijdKnop.Click += new System.EventHandler(this.crimiVsLeeftijdKnop_Click);
             // 
-            // misdrijfNamen
-            // 
-            this.misdrijfNamen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.misdrijfNamen.Location = new System.Drawing.Point(647, 46);
-            this.misdrijfNamen.Name = "misdrijfNamen";
-            this.misdrijfNamen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.misdrijfNamen.Size = new System.Drawing.Size(282, 384);
-            this.misdrijfNamen.TabIndex = 5;
-            this.misdrijfNamen.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.misdrijfNamen_CellMouseClick);
-            // 
-            // Form1
+            // HoofdschermForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources._2__2522274_Flag_20Of_20Nederland;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.misdrijfNamen);
-            this.Controls.Add(this.eenNaampje);
+            this.Controls.Add(this.crimiVsLeeftijdKnop);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.CrimiVSAfkomst);
             this.Controls.Add(this.CrimiVSGrond);
-            this.Name = "Form1";
+            this.Name = "HoofdschermForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eenNaampje)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.misdrijfNamen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,8 +116,7 @@
         private System.Windows.Forms.Button CrimiVSAfkomst;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView eenNaampje;
-        private System.Windows.Forms.DataGridView misdrijfNamen;
+        private System.Windows.Forms.Button crimiVsLeeftijdKnop;
     }
 }
 

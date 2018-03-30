@@ -25,20 +25,6 @@ namespace WindowsFormsApp3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlConnection dbConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\Database for project 3 - Databases.mdf;Integrated Security=True");
-            dbConnection.Open();
-            SqlCommand queryMisdaden = new SqlCommand(@"SELECT DISTINCT m.misdrijf_naam, m.misdrijf_id
-                                                        FROM misdrijf as m
-                                                        WHERE level = 'B'
-                                                        ORDER BY m.misdrijf_naam", dbConnection);
-            SqlDataReader reader = queryMisdaden.ExecuteReader();
-            DataTable table = new DataTable();
-            table.Load(reader);
-            misdrijfNamen.DataSource = table;
-        }
-
-        private void CrimiVSGrond_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -49,37 +35,20 @@ namespace WindowsFormsApp3
 
         private void CrimiVSAfkomst_Click(object sender, EventArgs e)
         {
-
+            Ethniciteit form2 = new Ethniciteit();
+            form2.Show();
         }
 
-        private void misdrijfNamen_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void CrimiVSGrond_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = (sender as DataGridView).Rows[e.RowIndex];
-                String misdrijf = (row.Cells["misdrijf_naam"].Value.ToString());
-                misdrijf = misdrijf.Substring(0, misdrijf.IndexOf(" "));
-                UpdateGrid(misdrijf);
-            }
-
+            Landbouw form2 = new Landbouw();
+            form2.Show();
         }
 
-        private void UpdateGrid(string misdrijf)
+        private void crimiVsLeeftijdKnop_Click(object sender, EventArgs e)
         {
-            SqlConnection dbConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\loren\source\repos\WindowsFormsApp3\WindowsFormsApp3\Database for project 3 - Databases.mdf;Integrated Security=True");
-            dbConnection.Open();
-            SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY c.tot_regis_mis DESC, m.misdrijf_naam, p.prov_naam), m.misdrijf_naam,c.tot_regis_mis, p.prov_naam
-                                                        FROM crimi as c, provincie as p, misdrijf as m
-                                                        WHERE c.prov_id = p.prov_id
-                                                        AND c.misdrijf_id = m.misdrijf_id
-                                                        AND c.periode LIKE '2016%'
-                                                        AND level = 'B'
-                                                        AND m.misdrijf_naam LIKE '"+misdrijf+"%'", dbConnection);
-            SqlDataReader reader = queryMisdaden.ExecuteReader();
-            DataTable table = new DataTable();
-            table.Load(reader);
-            eenNaampje.DataSource = table;
-
+            Leeftijden form2 = new Leeftijden();
+            form2.Show();
         }
     }
 }

@@ -65,16 +65,43 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Ethniciteit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ethniciteit.Designer.cs">
+      <DependentUpon>Ethniciteit.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoofdschermForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HoofdschermForm.Designer.cs">
       <DependentUpon>HoofdschermForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Landbouw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Landbouw.Designer.cs">
+      <DependentUpon>Landbouw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leeftijden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leeftijden.Designer.cs">
+      <DependentUpon>Leeftijden.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ethniciteit.resx">
+      <DependentUpon>Ethniciteit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HoofdschermForm.resx">
       <DependentUpon>HoofdschermForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Landbouw.resx">
+      <DependentUpon>Landbouw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leeftijden.resx">
+      <DependentUpon>Leeftijden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
