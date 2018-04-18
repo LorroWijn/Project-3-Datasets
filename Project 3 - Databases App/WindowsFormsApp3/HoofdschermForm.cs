@@ -37,18 +37,21 @@ namespace WindowsFormsApp3
         {
             Ethniciteit form2 = new Ethniciteit();
             form2.Show();
+            this.Hide();
         }
 
         private void CrimiVSGrond_Click(object sender, EventArgs e)
         {
             Landbouw form2 = new Landbouw();
             form2.Show();
+            this.Hide();
         }
 
         private void crimiVsLeeftijdKnop_Click(object sender, EventArgs e)
         {
             Leeftijden form2 = new Leeftijden();
             form2.Show();
+            this.Hide();
         }
     }
 }
