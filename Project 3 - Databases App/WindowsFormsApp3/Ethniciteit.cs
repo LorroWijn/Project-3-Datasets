@@ -128,7 +128,7 @@ namespace WindowsFormsApp3
 //-----------------------------------------------------------------------------------------------------------------------
         private void UpdateGrid(string misdrijf)
         {
-            SqlConnection dbConnection = new SqlConnection(DataSource.dataSource);
+            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
             dbConnection.Open();
             SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY p.prov_naam, m.misdrijf_naam, c.tot_regis_mis), m.misdrijf_naam,c.tot_regis_mis, p.prov_naam
                                                         FROM crimi as c, provincie as p, misdrijf as m
@@ -252,7 +252,7 @@ namespace WindowsFormsApp3
 
         private void UpdateGridEthniciteit(string meegegevenEthiniciteit)
         {
-            SqlConnection dbConnection = new SqlConnection(DataSource.dataSource);
+            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
             dbConnection.Open();
             SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY p.prov_naam, a." + meegegevenEthiniciteit + " DESC), a." + meegegevenEthiniciteit + @", p.prov_naam
                                                                         FROM afkomst as a, provincie as p

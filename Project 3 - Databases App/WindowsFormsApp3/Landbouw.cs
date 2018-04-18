@@ -128,7 +128,7 @@ namespace WindowsFormsApp3
         //-----------------------------------------------------------------------------------------------------------------------
         private void UpdateGrid(string misdrijf)
         {
-            SqlConnection dbConnection = new SqlConnection(DataSource.dataSource);
+            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
             dbConnection.Open();
             SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY p.prov_naam, m.misdrijf_naam, c.tot_regis_mis), m.misdrijf_naam,c.tot_regis_mis, p.prov_naam
                                                         FROM crimi as c, provincie as p, misdrijf as m
@@ -190,7 +190,7 @@ namespace WindowsFormsApp3
 
         private void UpdateGridGrondbouw(string meegegevenGrondbouw)
         {
-            SqlConnection dbConnection = new SqlConnection(DataSource.dataSource);
+            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
             dbConnection.Open();
             SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY opp_" + meegegevenGrondbouw + " desc, p.prov_naam), opp_" + meegegevenGrondbouw + @", p.prov_naam
                                                                     FROM oppervlakte as o, provincie as p
@@ -226,7 +226,7 @@ namespace WindowsFormsApp3
 
         private void AlleMisdrijven_CheckedChanged(object sender, EventArgs e)
         {
-            SqlConnection dbConnection = new SqlConnection(DataSource.dataSource);
+            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
             dbConnection.Open();
             SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY c.tot_regis_mis DESC, m.misdrijf_naam, p.prov_naam), m.misdrijf_naam, c.tot_regis_mis, p.prov_naam
                                                                     FROM misdrijf as m, provincie as p, crimi as c

@@ -25,3 +25,18 @@ D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debu
 D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Ethniciteit.resources
 D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Leeftijden.resources
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\bin\Debug\Database for project 3 - Databases.mdf
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\bin\Debug\Database for project 3 - Databases_log.ldf
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\Project 3 - Databases application.csprojResolveAssemblyReference.cache
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Ethniciteit.resources
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.HoofdschermForm.resources
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Landbouw.resources
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Leeftijden.resources
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\Project 3 - Databases application.csproj.GenerateResource.cache
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\Project 3 - Databases application.csproj.CoreCompileInputs.cache
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb

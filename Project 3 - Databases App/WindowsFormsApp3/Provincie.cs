@@ -9,11 +9,7 @@ namespace WindowsFormsApp3
     public static class Constants
     {
         public const int aantalProvincies = 12;
-    }
-
-    public static class DataSource
-    {
-        public const string dataSource = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf;Integrated Security=True";
+        public const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf';Integrated Security = True";
     }
 
     class Calculator

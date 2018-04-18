@@ -219,6 +219,7 @@
             this.linksHeleKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.linksHeleKaart.TabIndex = 98;
             this.linksHeleKaart.TabStop = false;
+            this.linksHeleKaart.Click += new System.EventHandler(this.linksHeleKaart_Click);
             // 
             // linksZuidhKaart
             // 
