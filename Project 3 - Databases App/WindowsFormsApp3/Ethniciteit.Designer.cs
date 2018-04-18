@@ -202,7 +202,6 @@
             this.NonWestAllochtonen.Name = "NonWestAllochtonen";
             this.NonWestAllochtonen.Size = new System.Drawing.Size(151, 17);
             this.NonWestAllochtonen.TabIndex = 3;
-            this.NonWestAllochtonen.TabStop = true;
             this.NonWestAllochtonen.Text = "Niet Westerse Allochtonen";
             this.NonWestAllochtonen.UseVisualStyleBackColor = true;
             // 
@@ -213,7 +212,6 @@
             this.TotAllochtonen.Name = "TotAllochtonen";
             this.TotAllochtonen.Size = new System.Drawing.Size(114, 17);
             this.TotAllochtonen.TabIndex = 2;
-            this.TotAllochtonen.TabStop = true;
             this.TotAllochtonen.Text = "Totaal Allochtonen";
             this.TotAllochtonen.UseVisualStyleBackColor = true;
             // 
@@ -224,7 +222,6 @@
             this.WestAllochtonen.Name = "WestAllochtonen";
             this.WestAllochtonen.Size = new System.Drawing.Size(129, 17);
             this.WestAllochtonen.TabIndex = 1;
-            this.WestAllochtonen.TabStop = true;
             this.WestAllochtonen.Text = "Westerse Allochtonen";
             this.WestAllochtonen.UseVisualStyleBackColor = true;
             // 
@@ -235,7 +232,6 @@
             this.Autochtonen.Name = "Autochtonen";
             this.Autochtonen.Size = new System.Drawing.Size(86, 17);
             this.Autochtonen.TabIndex = 0;
-            this.Autochtonen.TabStop = true;
             this.Autochtonen.Text = "Autochtonen";
             this.Autochtonen.UseVisualStyleBackColor = true;
             // 
@@ -264,9 +260,9 @@
             this.OverigeWetten.Name = "OverigeWetten";
             this.OverigeWetten.Size = new System.Drawing.Size(154, 17);
             this.OverigeWetten.TabIndex = 14;
-            this.OverigeWetten.TabStop = true;
             this.OverigeWetten.Text = "9 Misdrijven overige wetten";
             this.OverigeWetten.UseVisualStyleBackColor = true;
+            this.OverigeWetten.CheckedChanged += new System.EventHandler(this.OverigeWetten_CheckedChanged);
             // 
             // Vermogensmisdrijven
             // 
@@ -275,7 +271,6 @@
             this.Vermogensmisdrijven.Name = "Vermogensmisdrijven";
             this.Vermogensmisdrijven.Size = new System.Drawing.Size(133, 17);
             this.Vermogensmisdrijven.TabIndex = 6;
-            this.Vermogensmisdrijven.TabStop = true;
             this.Vermogensmisdrijven.Text = "1 Vermogensmisdrijven";
             this.Vermogensmisdrijven.UseVisualStyleBackColor = true;
             this.Vermogensmisdrijven.CheckedChanged += new System.EventHandler(this.Vermogensmisdrijven_CheckedChanged);
@@ -287,9 +282,9 @@
             this.AlleMisdrijven.Name = "AlleMisdrijven";
             this.AlleMisdrijven.Size = new System.Drawing.Size(101, 17);
             this.AlleMisdrijven.TabIndex = 7;
-            this.AlleMisdrijven.TabStop = true;
             this.AlleMisdrijven.Text = "0 Alle Misdrijven";
             this.AlleMisdrijven.UseVisualStyleBackColor = true;
+            this.AlleMisdrijven.CheckedChanged += new System.EventHandler(this.AlleMisdrijven_CheckedChanged);
             // 
             // Vernielingen
             // 
@@ -298,9 +293,9 @@
             this.Vernielingen.Name = "Vernielingen";
             this.Vernielingen.Size = new System.Drawing.Size(213, 17);
             this.Vernielingen.TabIndex = 8;
-            this.Vernielingen.TabStop = true;
             this.Vernielingen.Text = "2 Vernielingen, misdr.openb.orde/gezag";
             this.Vernielingen.UseVisualStyleBackColor = true;
+            this.Vernielingen.CheckedChanged += new System.EventHandler(this.Vernielingen_CheckedChanged);
             // 
             // Wapen
             // 
@@ -309,9 +304,9 @@
             this.Wapen.Name = "Wapen";
             this.Wapen.Size = new System.Drawing.Size(140, 17);
             this.Wapen.TabIndex = 13;
-            this.Wapen.TabStop = true;
             this.Wapen.Text = "7 (Vuur)wapenmisdrijven";
             this.Wapen.UseVisualStyleBackColor = true;
+            this.Wapen.CheckedChanged += new System.EventHandler(this.Wapen_CheckedChanged);
             // 
             // GeweldEnSeks
             // 
@@ -320,9 +315,9 @@
             this.GeweldEnSeks.Name = "GeweldEnSeks";
             this.GeweldEnSeks.Size = new System.Drawing.Size(187, 17);
             this.GeweldEnSeks.TabIndex = 9;
-            this.GeweldEnSeks.TabStop = true;
             this.GeweldEnSeks.Text = "3 Gewelds- en seksuele misdrijven";
             this.GeweldEnSeks.UseVisualStyleBackColor = true;
+            this.GeweldEnSeks.CheckedChanged += new System.EventHandler(this.GeweldEnSeks_CheckedChanged);
             // 
             // Drugs
             // 
@@ -331,9 +326,9 @@
             this.Drugs.Name = "Drugs";
             this.Drugs.Size = new System.Drawing.Size(108, 17);
             this.Drugs.TabIndex = 12;
-            this.Drugs.TabStop = true;
             this.Drugs.Text = "6 Drugsmisdrijven";
             this.Drugs.UseVisualStyleBackColor = true;
+            this.Drugs.CheckedChanged += new System.EventHandler(this.Drugs_CheckedChanged);
             // 
             // WvSr
             // 
@@ -342,9 +337,9 @@
             this.WvSr.Name = "WvSr";
             this.WvSr.Size = new System.Drawing.Size(149, 17);
             this.WvSr.TabIndex = 10;
-            this.WvSr.TabStop = true;
             this.WvSr.Text = "4 Misdrijven WvSr (overig)";
             this.WvSr.UseVisualStyleBackColor = true;
+            this.WvSr.CheckedChanged += new System.EventHandler(this.WvSr_CheckedChanged);
             // 
             // Verkeer
             // 
@@ -353,9 +348,9 @@
             this.Verkeer.Name = "Verkeer";
             this.Verkeer.Size = new System.Drawing.Size(122, 17);
             this.Verkeer.TabIndex = 11;
-            this.Verkeer.TabStop = true;
             this.Verkeer.Text = "5 Verkeersmisdrijven";
             this.Verkeer.UseVisualStyleBackColor = true;
+            this.Verkeer.CheckedChanged += new System.EventHandler(this.Verkeer_CheckedChanged);
             // 
             // linksFlevolandKaart
             // 
@@ -394,6 +389,7 @@
             this.linksHeleKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.linksHeleKaart.TabIndex = 68;
             this.linksHeleKaart.TabStop = false;
+            this.linksHeleKaart.Click += new System.EventHandler(this.linksHeleKaart_Click);
             // 
             // linksZeelandKaart
             // 

@@ -125,52 +125,39 @@ namespace WindowsFormsApp3
             rechtsOutlineKaart.BackColor = Color.Transparent;
         }
 
-        //-----------------------------------------------------------------------------------------------------------------------
-        private void UpdateGrid(string misdrijf)
-        {
-            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
-            dbConnection.Open();
-            SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY p.prov_naam, m.misdrijf_naam, c.tot_regis_mis), m.misdrijf_naam,c.tot_regis_mis, p.prov_naam
-                                                        FROM crimi as c, provincie as p, misdrijf as m
-                                                        WHERE c.prov_id = p.prov_id
-                                                        AND c.misdrijf_id = m.misdrijf_id
-                                                        AND c.periode LIKE '2010%'
-                                                        AND level = 'B'
-                                                        AND p.prov_naam != 'Niet in te delen'
-                                                        AND m.misdrijf_naam LIKE '" + misdrijf + "%'", dbConnection);
-            SqlDataReader reader = queryMisdaden.ExecuteReader();
-            DataTable table = new DataTable();
-            table.Load(reader);
 
-            Dictionary<ProvincieLinksEnum, int> provincieScore2 = new Dictionary<ProvincieLinksEnum, int>();
+        //-----------------------------------------------------------------------------------------------------------------------
+        private void kaartTekenen(string columnName, DataTable table, string zijde)
+        {
+            Dictionary<ProvincieEnum, int> provincieScore2 = new Dictionary<ProvincieEnum, int>();
 
             for (int provincieIndex = 0; provincieIndex < Constants.aantalProvincies; provincieIndex++)
             {
-                var huidigeProvincieScore = Convert.ToInt32(table.Rows[provincieIndex]["tot_regis_mis"]);
-                var provincie = (ProvincieLinksEnum)provincieIndex;
+                var huidigeProvincieScore = Convert.ToInt32(table.Rows[provincieIndex][columnName]);
+                var provincie = (ProvincieEnum)provincieIndex;
                 provincieScore2[provincie] = huidigeProvincieScore;
             }
 
-            var drentheScore = provincieScore2[ProvincieLinksEnum.Drenthe];
-            var flevolandScore = provincieScore2[ProvincieLinksEnum.Flevoland];
-            var frieslandScore = provincieScore2[ProvincieLinksEnum.Friesland];
-            var gelderlandScore = provincieScore2[ProvincieLinksEnum.Gelderland];
-            var groningenScore = provincieScore2[ProvincieLinksEnum.Groningen];
-            var limburgScore = provincieScore2[ProvincieLinksEnum.Limburg];
-            var noordBrabantScore = provincieScore2[ProvincieLinksEnum.NoordBrabant];
-            var noordHollandScore = provincieScore2[ProvincieLinksEnum.NoordHolland];
-            var overijsselScore = provincieScore2[ProvincieLinksEnum.Overijssel];
-            var utrechtScore = provincieScore2[ProvincieLinksEnum.Utrecht];
-            var zeelandScore = provincieScore2[ProvincieLinksEnum.Zeeland];
-            var zuidHollandScore = provincieScore2[ProvincieLinksEnum.ZuidHolland];
+            var drentheScore = provincieScore2[ProvincieEnum.Drenthe];
+            var flevolandScore = provincieScore2[ProvincieEnum.Flevoland];
+            var frieslandScore = provincieScore2[ProvincieEnum.Friesland];
+            var gelderlandScore = provincieScore2[ProvincieEnum.Gelderland];
+            var groningenScore = provincieScore2[ProvincieEnum.Groningen];
+            var limburgScore = provincieScore2[ProvincieEnum.Limburg];
+            var noordBrabantScore = provincieScore2[ProvincieEnum.NoordBrabant];
+            var noordHollandScore = provincieScore2[ProvincieEnum.NoordHolland];
+            var overijsselScore = provincieScore2[ProvincieEnum.Overijssel];
+            var utrechtScore = provincieScore2[ProvincieEnum.Utrecht];
+            var zeelandScore = provincieScore2[ProvincieEnum.Zeeland];
+            var zuidHollandScore = provincieScore2[ProvincieEnum.ZuidHolland];
 
             var maximum = drentheScore;
             var minimum = drentheScore;
 
             for (int count = 1; count < Constants.aantalProvincies; count++)
             {
-                maximum = Calculator.Maximum(maximum, Convert.ToInt32(table.Rows[count]["tot_regis_mis"]));
-                minimum = Calculator.Minimum(minimum, Convert.ToInt32(table.Rows[count]["tot_regis_mis"]));
+                maximum = Calculator.Maximum(maximum, Convert.ToInt32(table.Rows[count][columnName]));
+                minimum = Calculator.Minimum(minimum, Convert.ToInt32(table.Rows[count][columnName]));
             }
 
 
@@ -186,6 +173,95 @@ namespace WindowsFormsApp3
             var newutrechtScore = Calculator.Difference(minimum, maximum, utrechtScore);
             var newzeelandScore = Calculator.Difference(minimum, maximum, zeelandScore);
             var newzuidHollandScore = Calculator.Difference(minimum, maximum, zuidHollandScore);
+
+            System.Resources.ResourceManager resourceManager = Properties.Resources.ResourceManager;
+
+            var drentheObj = resourceManager.GetObject("DR" + newDrentheScore);
+            var flevolandObj = resourceManager.GetObject("FL" + newflevolandScore);
+            var frieslandObj = resourceManager.GetObject("FR" + newfrieslandScore);
+            var gelderlandObj = resourceManager.GetObject("GL" + newgelderlandScore);
+            var groningenObj = resourceManager.GetObject("GR" + newgroningenScore);
+            var limburgObj = resourceManager.GetObject("LB" + newlimburgScore);
+            var noordbObj = resourceManager.GetObject("NB" + newnoordBrabantScore);
+            var noordhObj = resourceManager.GetObject("NH" + newnoordHollandScore);
+            var overijsselObj = resourceManager.GetObject("OV" + newoverijsselScore);
+            var utrechtObj = resourceManager.GetObject("UT" + newutrechtScore);
+            var zeelandObj = resourceManager.GetObject("ZL" + newzeelandScore);
+            var zuidhObj = resourceManager.GetObject("ZH" + newzuidHollandScore);
+
+            if (zijde == "rechts")
+                RechterKaart(drentheObj, flevolandObj, frieslandObj, gelderlandObj, groningenObj, limburgObj, noordbObj, noordhObj, overijsselObj, utrechtObj, zeelandObj, zuidhObj);
+            else if (zijde == "links")
+                LinkerKaart(drentheObj, flevolandObj, frieslandObj, gelderlandObj, groningenObj, limburgObj, noordbObj, noordhObj, overijsselObj, utrechtObj, zeelandObj, zuidhObj);
+
+        }
+
+        private void LinkerKaart(object drentheObj, object flevolandObj, object frieslandObj, object gelderlandObj, object groningenObj, object limburgObj, object noordbObj, object noordhObj, object overijsselObj, object utrechtObj, object zeelandObj, object zuidhObj)
+        {
+            linksDrentheKaart.Image = ((System.Drawing.Bitmap)(drentheObj));
+            linksFlevolandKaart.Image = ((System.Drawing.Bitmap)(flevolandObj));
+            linksFrieslandKaart.Image = ((System.Drawing.Bitmap)(frieslandObj));
+            linksGelderlandKaart.Image = ((System.Drawing.Bitmap)(gelderlandObj));
+            linksGroningenKaart.Image = ((System.Drawing.Bitmap)(groningenObj));
+            linksLimburgKaart.Image = ((System.Drawing.Bitmap)(limburgObj));
+            linksNoordbKaart.Image = ((System.Drawing.Bitmap)(noordbObj));
+            linksNoordhKaart.Image = ((System.Drawing.Bitmap)(noordhObj));
+            linksOverijsselKaart.Image = ((System.Drawing.Bitmap)(overijsselObj));
+            linksUtrechtKaart.Image = ((System.Drawing.Bitmap)(utrechtObj));
+            linksZeelandKaart.Image = ((System.Drawing.Bitmap)(zeelandObj));
+            linksZuidhKaart.Image = ((System.Drawing.Bitmap)(zuidhObj));
+        }
+
+        private void RechterKaart(object drentheObj, object flevolandObj, object frieslandObj, object gelderlandObj, object groningenObj, object limburgObj, object noordbObj, object noordhObj, object overijsselObj, object utrechtObj, object zeelandObj, object zuidhObj)
+        {
+            rechtsDrentheKaart.Image = ((System.Drawing.Bitmap)(drentheObj));
+            rechtsFlevolandKaart.Image = ((System.Drawing.Bitmap)(flevolandObj));
+            rechtsFrieslandKaart.Image = ((System.Drawing.Bitmap)(frieslandObj));
+            rechtsGelderlandKaart.Image = ((System.Drawing.Bitmap)(gelderlandObj));
+            rechtsGroningenKaart.Image = ((System.Drawing.Bitmap)(groningenObj));
+            rechtsLimburgKaart.Image = ((System.Drawing.Bitmap)(limburgObj));
+            rechtsNoordbKaart.Image = ((System.Drawing.Bitmap)(noordbObj));
+            rechtsNoordhKaart.Image = ((System.Drawing.Bitmap)(noordhObj));
+            rechtsOverijsselKaart.Image = ((System.Drawing.Bitmap)(overijsselObj));
+            rechtsUtrechtKaart.Image = ((System.Drawing.Bitmap)(utrechtObj));
+            rechtsZeelandKaart.Image = ((System.Drawing.Bitmap)(zeelandObj));
+            rechtsZuidhKaart.Image = ((System.Drawing.Bitmap)(zuidhObj));
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------------
+        private void UpdateGrid(string misdrijf)
+        {
+            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
+            dbConnection.Open();
+            SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY p.prov_naam, m.misdrijfnaam, c.tot_regis_mis), m.misdrijfnaam,c.tot_regis_mis, p.prov_naam
+                                                        FROM crimi as c, provincie as p, misdrijf as m
+                                                        WHERE c.prov_id = p.prov_id
+                                                        AND c.misdrijf_id = m.misdrijf_id
+                                                        AND c.periode LIKE '2010%'
+                                                        AND level = 'B'
+                                                        AND p.prov_naam != 'Niet in te delen'
+                                                        AND m.misdrijfnaam LIKE '" + misdrijf + "%'", dbConnection);
+            SqlDataReader reader = queryMisdaden.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+            kaartTekenen("tot_regis_mis", table, "links");
+        }
+
+        private void AlleMisdrijven_CheckedChanged(object sender, EventArgs e)
+        {
+            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
+            dbConnection.Open();
+            SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY c.tot_regis_mis DESC, m.misdrijfnaam, p.prov_naam), m.misdrijfnaam, c.tot_regis_mis, p.prov_naam
+                                                                    FROM misdrijf as m, provincie as p, crimi as c
+                                                                    WHERE m.misdrijf_id = c.misdrijf_id
+                                                                    AND p.prov_id = c.prov_id
+                                                                    AND c.periode LIKE '2010%'
+                                                                    AND p.prov_naam != 'Niet in te delen'
+                                                                    AND m.misdrijf_id = '0'", dbConnection);
+            SqlDataReader reader = queryMisdaden.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+            kaartTekenen("tot_regis_mis", table, "links");
         }
 
         private void UpdateGridGrondbouw(string meegegevenGrondbouw)
@@ -200,68 +276,9 @@ namespace WindowsFormsApp3
             SqlDataReader reader = queryMisdaden.ExecuteReader();
             DataTable table = new DataTable();
             table.Load(reader);
-
-            Dictionary<ProvincieRechtsEnum, int> provincieScore2 = new Dictionary<ProvincieRechtsEnum, int>();
-
-            for (int provincieIndex = 0; provincieIndex < Constants.aantalProvincies; provincieIndex++)
-            {
-                var huidigeProvincieScore = Convert.ToInt32(table.Rows[provincieIndex]["opp_" + meegegevenGrondbouw]);
-                var provincie = (ProvincieRechtsEnum)provincieIndex;
-                provincieScore2[provincie] = huidigeProvincieScore;
-            }
-
-            var DrentheScore = provincieScore2[ProvincieRechtsEnum.Drenthe];
-            var Flevoland = provincieScore2[ProvincieRechtsEnum.Flevoland];
-            var Friesland = provincieScore2[ProvincieRechtsEnum.Friesland];
-            var Gelderland = provincieScore2[ProvincieRechtsEnum.Gelderland];
-            var Groningen = provincieScore2[ProvincieRechtsEnum.Groningen];
-            var Limburg = provincieScore2[ProvincieRechtsEnum.Limburg];
-            var NoordBrabant = provincieScore2[ProvincieRechtsEnum.NoordBrabant];
-            var NoordHolland = provincieScore2[ProvincieRechtsEnum.NoordHolland];
-            var Overijssel = provincieScore2[ProvincieRechtsEnum.Overijssel];
-            var Utrecht = provincieScore2[ProvincieRechtsEnum.Utrecht];
-            var Zeeland = provincieScore2[ProvincieRechtsEnum.Zeeland];
-            var ZuidHolland = provincieScore2[ProvincieRechtsEnum.ZuidHolland];
+            kaartTekenen("opp_" + meegegevenGrondbouw, table, "rechts");
         }
-
-        private void AlleMisdrijven_CheckedChanged(object sender, EventArgs e)
-        {
-            SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
-            dbConnection.Open();
-            SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY c.tot_regis_mis DESC, m.misdrijf_naam, p.prov_naam), m.misdrijf_naam, c.tot_regis_mis, p.prov_naam
-                                                                    FROM misdrijf as m, provincie as p, crimi as c
-                                                                    WHERE m.misdrijf_id = c.misdrijf_id
-                                                                    AND p.prov_id = c.prov_id
-                                                                    AND c.periode LIKE '2015%'
-                                                                    AND p.prov_naam != 'Niet in te delen'
-                                                                    AND m.misdrijf_id = '0'", dbConnection);
-            SqlDataReader reader = queryMisdaden.ExecuteReader();
-            DataTable table = new DataTable();
-            table.Load(reader);
-
-            Dictionary<ProvincieLinksEnum, int> provincieScore2 = new Dictionary<ProvincieLinksEnum, int>();
-
-            for (int provincieIndex = 0; provincieIndex < Constants.aantalProvincies; provincieIndex++)
-            {
-                var huidigeProvincieScore = Convert.ToInt32(table.Rows[provincieIndex]["tot_regis_mis"]);
-                var provincie = (ProvincieLinksEnum)provincieIndex;
-                provincieScore2[provincie] = huidigeProvincieScore;
-            }
-
-            var DrentheScore = provincieScore2[ProvincieLinksEnum.Drenthe];
-            var Flevoland = provincieScore2[ProvincieLinksEnum.Flevoland];
-            var Friesland = provincieScore2[ProvincieLinksEnum.Friesland];
-            var Gelderland = provincieScore2[ProvincieLinksEnum.Gelderland];
-            var Groningen = provincieScore2[ProvincieLinksEnum.Groningen];
-            var Limburg = provincieScore2[ProvincieLinksEnum.Limburg];
-            var NoordBrabant = provincieScore2[ProvincieLinksEnum.NoordBrabant];
-            var NoordHolland = provincieScore2[ProvincieLinksEnum.NoordHolland];
-            var Overijssel = provincieScore2[ProvincieLinksEnum.Overijssel];
-            var Utrecht = provincieScore2[ProvincieLinksEnum.Utrecht];
-            var Zeeland = provincieScore2[ProvincieLinksEnum.Zeeland];
-            var ZuidHolland = provincieScore2[ProvincieLinksEnum.ZuidHolland];
-        }
-
+ 
 
         //-----------------------------------------------------------------------------------------------------------------------
         private void Vermogensmisdrijven_CheckedChanged(object sender, EventArgs e)
@@ -334,6 +351,11 @@ namespace WindowsFormsApp3
             this.Hide();
             HoofdschermForm form1 = new HoofdschermForm();
             form1.Show();
+        }
+
+        private void linksHeleKaart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

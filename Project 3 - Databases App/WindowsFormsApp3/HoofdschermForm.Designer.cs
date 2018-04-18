@@ -52,7 +52,7 @@
             this.CrimiVSGrond.TabIndex = 0;
             this.CrimiVSGrond.Text = "Criminaliteit versus Landbouw/Grondbouw";
             this.CrimiVSGrond.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CrimiVSGrond.UseVisualStyleBackColor = false;
+            this.CrimiVSGrond.UseVisualStyleBackColor = true;
             this.CrimiVSGrond.Click += new System.EventHandler(this.CrimiVSGrond_Click);
             // 
             // CrimiVSAfkomst

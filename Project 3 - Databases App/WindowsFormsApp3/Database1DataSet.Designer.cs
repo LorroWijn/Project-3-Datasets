@@ -2004,7 +2004,7 @@ namespace WindowsFormsApp3 {
             
             private global::System.Data.DataColumn columnmisdrijf_code;
             
-            private global::System.Data.DataColumn columnmisdrijf_naam;
+            private global::System.Data.DataColumn columnmisdrijfnaam;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -2065,9 +2065,9 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn misdrijf_naamColumn {
+            public global::System.Data.DataColumn misdrijfnaamColumn {
                 get {
-                    return this.columnmisdrijf_naam;
+                    return this.columnmisdrijfnaam;
                 }
             }
             
@@ -2108,13 +2108,13 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public misdrijfRow AddmisdrijfRow(string misdrijf_id, string level, string misdrijf_code, string misdrijf_naam) {
+            public misdrijfRow AddmisdrijfRow(string misdrijf_id, string level, string misdrijf_code, string misdrijfnaam) {
                 misdrijfRow rowmisdrijfRow = ((misdrijfRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         misdrijf_id,
                         level,
                         misdrijf_code,
-                        misdrijf_naam};
+                        misdrijfnaam};
                 rowmisdrijfRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowmisdrijfRow);
                 return rowmisdrijfRow;
@@ -2147,7 +2147,7 @@ namespace WindowsFormsApp3 {
                 this.columnmisdrijf_id = base.Columns["misdrijf_id"];
                 this.columnlevel = base.Columns["level"];
                 this.columnmisdrijf_code = base.Columns["misdrijf_code"];
-                this.columnmisdrijf_naam = base.Columns["misdrijf_naam"];
+                this.columnmisdrijfnaam = base.Columns["misdrijfnaam"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2159,8 +2159,8 @@ namespace WindowsFormsApp3 {
                 base.Columns.Add(this.columnlevel);
                 this.columnmisdrijf_code = new global::System.Data.DataColumn("misdrijf_code", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmisdrijf_code);
-                this.columnmisdrijf_naam = new global::System.Data.DataColumn("misdrijf_naam", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmisdrijf_naam);
+                this.columnmisdrijfnaam = new global::System.Data.DataColumn("misdrijfnaam", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmisdrijfnaam);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnmisdrijf_id}, true));
                 this.columnmisdrijf_id.AllowDBNull = false;
@@ -2168,7 +2168,7 @@ namespace WindowsFormsApp3 {
                 this.columnmisdrijf_id.MaxLength = 7;
                 this.columnlevel.MaxLength = 1;
                 this.columnmisdrijf_code.MaxLength = 7;
-                this.columnmisdrijf_naam.MaxLength = 50;
+                this.columnmisdrijfnaam.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3933,17 +3933,17 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string misdrijf_naam {
+            public string misdrijfnaam {
                 get {
                     try {
-                        return ((string)(this[this.tablemisdrijf.misdrijf_naamColumn]));
+                        return ((string)(this[this.tablemisdrijf.misdrijfnaamColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'misdrijf_naam\' in table \'misdrijf\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'misdrijfnaam\' in table \'misdrijf\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablemisdrijf.misdrijf_naamColumn] = value;
+                    this[this.tablemisdrijf.misdrijfnaamColumn] = value;
                 }
             }
             
@@ -3973,14 +3973,14 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Ismisdrijf_naamNull() {
-                return this.IsNull(this.tablemisdrijf.misdrijf_naamColumn);
+            public bool IsmisdrijfnaamNull() {
+                return this.IsNull(this.tablemisdrijf.misdrijfnaamColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setmisdrijf_naamNull() {
-                this[this.tablemisdrijf.misdrijf_naamColumn] = global::System.Convert.DBNull;
+            public void SetmisdrijfnaamNull() {
+                this[this.tablemisdrijf.misdrijfnaamColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6990,44 +6990,46 @@ SELECT id, prov_id, periode, tot_bevolk, jongerdan5, van5tot10, van10tot15, van1
             tableMapping.ColumnMappings.Add("misdrijf_id", "misdrijf_id");
             tableMapping.ColumnMappings.Add("level", "level");
             tableMapping.ColumnMappings.Add("misdrijf_code", "misdrijf_code");
-            tableMapping.ColumnMappings.Add("misdrijf_naam", "misdrijf_naam");
+            tableMapping.ColumnMappings.Add("misdrijfnaam", "misdrijfnaam");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[misdrijf] WHERE (([misdrijf_id] = @Original_misdrijf_id) AND ((@IsNull_level = 1 AND [level] IS NULL) OR ([level] = @Original_level)) AND ((@IsNull_misdrijf_code = 1 AND [misdrijf_code] IS NULL) OR ([misdrijf_code] = @Original_misdrijf_code)) AND ((@IsNull_misdrijf_naam = 1 AND [misdrijf_naam] IS NULL) OR ([misdrijf_naam] = @Original_misdrijf_naam)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[misdrijf] WHERE (([misdrijf_id] = @Original_misdrijf_id) AND ((@IsNull_level = 1 AND [level] IS NULL) OR ([level] = @Original_level)) AND ((@IsNull_misdrijf_code = 1 AND [misdrijf_code] IS NULL) OR ([misdrijf_code] = @Original_misdrijf_code)) AND ((@IsNull_misdrijfnaam = 1 AND [misdrijfnaam] IS NULL) OR ([misdrijfnaam] = @Original_misdrijfnaam)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_misdrijf_id", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_level", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_level", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_misdrijf_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_misdrijf_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_misdrijf_naam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_naam", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_misdrijf_naam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_naam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_misdrijfnaam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijfnaam", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_misdrijfnaam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijfnaam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[misdrijf] ([misdrijf_id], [level], [misdrijf_code], [misdrijf_naam]) VALUES (@misdrijf_id, @level, @misdrijf_code, @misdrijf_naam);
-SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (misdrijf_id = @misdrijf_id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[misdrijf] ([misdrijf_id], [level], [misdrijf_code], [misdrijfn" +
+                "aam]) VALUES (@misdrijf_id, @level, @misdrijf_code, @misdrijfnaam);\r\nSELECT misd" +
+                "rijf_id, level, misdrijf_code, misdrijfnaam FROM misdrijf WHERE (misdrijf_id = @" +
+                "misdrijf_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@misdrijf_id", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@level", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@misdrijf_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@misdrijf_naam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_naam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@misdrijfnaam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijfnaam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[misdrijf] SET [misdrijf_id] = @misdrijf_id, [level] = @level, [misdrijf_code] = @misdrijf_code, [misdrijf_naam] = @misdrijf_naam WHERE (([misdrijf_id] = @Original_misdrijf_id) AND ((@IsNull_level = 1 AND [level] IS NULL) OR ([level] = @Original_level)) AND ((@IsNull_misdrijf_code = 1 AND [misdrijf_code] IS NULL) OR ([misdrijf_code] = @Original_misdrijf_code)) AND ((@IsNull_misdrijf_naam = 1 AND [misdrijf_naam] IS NULL) OR ([misdrijf_naam] = @Original_misdrijf_naam)));
-SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (misdrijf_id = @misdrijf_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[misdrijf] SET [misdrijf_id] = @misdrijf_id, [level] = @level, [misdrijf_code] = @misdrijf_code, [misdrijfnaam] = @misdrijfnaam WHERE (([misdrijf_id] = @Original_misdrijf_id) AND ((@IsNull_level = 1 AND [level] IS NULL) OR ([level] = @Original_level)) AND ((@IsNull_misdrijf_code = 1 AND [misdrijf_code] IS NULL) OR ([misdrijf_code] = @Original_misdrijf_code)) AND ((@IsNull_misdrijfnaam = 1 AND [misdrijfnaam] IS NULL) OR ([misdrijfnaam] = @Original_misdrijfnaam)));
+SELECT misdrijf_id, level, misdrijf_code, misdrijfnaam FROM misdrijf WHERE (misdrijf_id = @misdrijf_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@misdrijf_id", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@level", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@misdrijf_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@misdrijf_naam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_naam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@misdrijfnaam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijfnaam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_misdrijf_id", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_level", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_level", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_misdrijf_code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_misdrijf_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_misdrijf_naam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_naam", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_misdrijf_naam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijf_naam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_misdrijfnaam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijfnaam", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_misdrijfnaam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "misdrijfnaam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7043,7 +7045,7 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT misdrijf_id, [level], misdrijf_code, misdrijf_naam FROM dbo.misdrijf";
+            this._commandCollection[0].CommandText = "SELECT misdrijf_id, [level], misdrijf_code, misdrijfnaam FROM dbo.misdrijf";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7104,7 +7106,7 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_misdrijf_id, string Original_level, string Original_misdrijf_code, string Original_misdrijf_naam) {
+        public virtual int Delete(string Original_misdrijf_id, string Original_level, string Original_misdrijf_code, string Original_misdrijfnaam) {
             if ((Original_misdrijf_id == null)) {
                 throw new global::System.ArgumentNullException("Original_misdrijf_id");
             }
@@ -7127,13 +7129,13 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_misdrijf_code));
             }
-            if ((Original_misdrijf_naam == null)) {
+            if ((Original_misdrijfnaam == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_misdrijf_naam));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_misdrijfnaam));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7155,7 +7157,7 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string misdrijf_id, string level, string misdrijf_code, string misdrijf_naam) {
+        public virtual int Insert(string misdrijf_id, string level, string misdrijf_code, string misdrijfnaam) {
             if ((misdrijf_id == null)) {
                 throw new global::System.ArgumentNullException("misdrijf_id");
             }
@@ -7174,11 +7176,11 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(misdrijf_code));
             }
-            if ((misdrijf_naam == null)) {
+            if ((misdrijfnaam == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(misdrijf_naam));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(misdrijfnaam));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7200,7 +7202,7 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string misdrijf_id, string level, string misdrijf_code, string misdrijf_naam, string Original_misdrijf_id, string Original_level, string Original_misdrijf_code, string Original_misdrijf_naam) {
+        public virtual int Update(string misdrijf_id, string level, string misdrijf_code, string misdrijfnaam, string Original_misdrijf_id, string Original_level, string Original_misdrijf_code, string Original_misdrijfnaam) {
             if ((misdrijf_id == null)) {
                 throw new global::System.ArgumentNullException("misdrijf_id");
             }
@@ -7219,11 +7221,11 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(misdrijf_code));
             }
-            if ((misdrijf_naam == null)) {
+            if ((misdrijfnaam == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(misdrijf_naam));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(misdrijfnaam));
             }
             if ((Original_misdrijf_id == null)) {
                 throw new global::System.ArgumentNullException("Original_misdrijf_id");
@@ -7247,13 +7249,13 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_misdrijf_code));
             }
-            if ((Original_misdrijf_naam == null)) {
+            if ((Original_misdrijfnaam == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_misdrijf_naam));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_misdrijfnaam));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7275,8 +7277,8 @@ SELECT misdrijf_id, level, misdrijf_code, misdrijf_naam FROM misdrijf WHERE (mis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string level, string misdrijf_code, string misdrijf_naam, string Original_misdrijf_id, string Original_level, string Original_misdrijf_code, string Original_misdrijf_naam) {
-            return this.Update(Original_misdrijf_id, level, misdrijf_code, misdrijf_naam, Original_misdrijf_id, Original_level, Original_misdrijf_code, Original_misdrijf_naam);
+        public virtual int Update(string level, string misdrijf_code, string misdrijfnaam, string Original_misdrijf_id, string Original_level, string Original_misdrijf_code, string Original_misdrijfnaam) {
+            return this.Update(Original_misdrijf_id, level, misdrijf_code, misdrijfnaam, Original_misdrijf_id, Original_level, Original_misdrijf_code, Original_misdrijfnaam);
         }
     }
     

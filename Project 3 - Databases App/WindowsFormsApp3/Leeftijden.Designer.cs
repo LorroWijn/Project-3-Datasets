@@ -31,7 +31,6 @@
             this.linksFrieslandKaart = new System.Windows.Forms.PictureBox();
             this.linksZeelandKaart = new System.Windows.Forms.PictureBox();
             this.OverigeWetten = new System.Windows.Forms.RadioButton();
-            this.Vermogensmisdrijven = new System.Windows.Forms.RadioButton();
             this.AlleMisdrijven = new System.Windows.Forms.RadioButton();
             this.Vernielingen = new System.Windows.Forms.RadioButton();
             this.Wapen = new System.Windows.Forms.RadioButton();
@@ -78,6 +77,7 @@
             this.linksOutlineKaart = new System.Windows.Forms.PictureBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.uitlegKnop = new System.Windows.Forms.Button();
+            this.Vermogensmisdrijven = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.linksFrieslandKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksZeelandKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksHeleKaart)).BeginInit();
@@ -142,22 +142,9 @@
             this.OverigeWetten.Name = "OverigeWetten";
             this.OverigeWetten.Size = new System.Drawing.Size(154, 17);
             this.OverigeWetten.TabIndex = 14;
-            this.OverigeWetten.TabStop = true;
             this.OverigeWetten.Text = "9 Misdrijven overige wetten";
             this.OverigeWetten.UseVisualStyleBackColor = true;
             this.OverigeWetten.CheckedChanged += new System.EventHandler(this.OverigeWetten_CheckedChanged);
-            // 
-            // Vermogensmisdrijven
-            // 
-            this.Vermogensmisdrijven.AutoSize = true;
-            this.Vermogensmisdrijven.Location = new System.Drawing.Point(34, 52);
-            this.Vermogensmisdrijven.Name = "Vermogensmisdrijven";
-            this.Vermogensmisdrijven.Size = new System.Drawing.Size(133, 17);
-            this.Vermogensmisdrijven.TabIndex = 6;
-            this.Vermogensmisdrijven.TabStop = true;
-            this.Vermogensmisdrijven.Text = "1 Vermogensmisdrijven";
-            this.Vermogensmisdrijven.UseVisualStyleBackColor = true;
-            this.Vermogensmisdrijven.CheckedChanged += new System.EventHandler(this.Vermogensmisdrijven_CheckedChanged);
             // 
             // AlleMisdrijven
             // 
@@ -166,7 +153,6 @@
             this.AlleMisdrijven.Name = "AlleMisdrijven";
             this.AlleMisdrijven.Size = new System.Drawing.Size(101, 17);
             this.AlleMisdrijven.TabIndex = 7;
-            this.AlleMisdrijven.TabStop = true;
             this.AlleMisdrijven.Text = "0 Alle Misdrijven";
             this.AlleMisdrijven.UseVisualStyleBackColor = true;
             this.AlleMisdrijven.CheckedChanged += new System.EventHandler(this.AlleMisdrijven_CheckedChanged);
@@ -178,7 +164,6 @@
             this.Vernielingen.Name = "Vernielingen";
             this.Vernielingen.Size = new System.Drawing.Size(213, 17);
             this.Vernielingen.TabIndex = 8;
-            this.Vernielingen.TabStop = true;
             this.Vernielingen.Text = "2 Vernielingen, misdr.openb.orde/gezag";
             this.Vernielingen.UseVisualStyleBackColor = true;
             this.Vernielingen.CheckedChanged += new System.EventHandler(this.Vernielingen_CheckedChanged);
@@ -190,7 +175,6 @@
             this.Wapen.Name = "Wapen";
             this.Wapen.Size = new System.Drawing.Size(140, 17);
             this.Wapen.TabIndex = 13;
-            this.Wapen.TabStop = true;
             this.Wapen.Text = "7 (Vuur)wapenmisdrijven";
             this.Wapen.UseVisualStyleBackColor = true;
             this.Wapen.CheckedChanged += new System.EventHandler(this.Wapen_CheckedChanged);
@@ -202,7 +186,6 @@
             this.GeweldEnSeks.Name = "GeweldEnSeks";
             this.GeweldEnSeks.Size = new System.Drawing.Size(187, 17);
             this.GeweldEnSeks.TabIndex = 9;
-            this.GeweldEnSeks.TabStop = true;
             this.GeweldEnSeks.Text = "3 Gewelds- en seksuele misdrijven";
             this.GeweldEnSeks.UseVisualStyleBackColor = true;
             this.GeweldEnSeks.CheckedChanged += new System.EventHandler(this.GeweldEnSeks_CheckedChanged);
@@ -448,7 +431,6 @@
             this.Drugs.Name = "Drugs";
             this.Drugs.Size = new System.Drawing.Size(108, 17);
             this.Drugs.TabIndex = 12;
-            this.Drugs.TabStop = true;
             this.Drugs.Text = "6 Drugsmisdrijven";
             this.Drugs.UseVisualStyleBackColor = true;
             this.Drugs.CheckedChanged += new System.EventHandler(this.Drugs_CheckedChanged);
@@ -556,7 +538,6 @@
             this.x25tot45.Name = "x25tot45";
             this.x25tot45.Size = new System.Drawing.Size(108, 17);
             this.x25tot45.TabIndex = 8;
-            this.x25tot45.TabStop = true;
             this.x25tot45.Text = "van 25 tot 45 jaar";
             this.x25tot45.UseVisualStyleBackColor = true;
             this.x25tot45.CheckedChanged += new System.EventHandler(this.x25tot45_CheckedChanged);
@@ -568,7 +549,6 @@
             this.xOuderDan80.Name = "xOuderDan80";
             this.xOuderDan80.Size = new System.Drawing.Size(108, 17);
             this.xOuderDan80.TabIndex = 7;
-            this.xOuderDan80.TabStop = true;
             this.xOuderDan80.Text = "ouder dan 80 jaar";
             this.xOuderDan80.UseVisualStyleBackColor = true;
             this.xOuderDan80.CheckedChanged += new System.EventHandler(this.xOuderDan80_CheckedChanged);
@@ -580,7 +560,6 @@
             this.x65tot80.Name = "x65tot80";
             this.x65tot80.Size = new System.Drawing.Size(108, 17);
             this.x65tot80.TabIndex = 6;
-            this.x65tot80.TabStop = true;
             this.x65tot80.Text = "van 65 tot 80 jaar";
             this.x65tot80.UseVisualStyleBackColor = true;
             this.x65tot80.CheckedChanged += new System.EventHandler(this.x65tot80_CheckedChanged);
@@ -592,7 +571,6 @@
             this.x45tot65.Name = "x45tot65";
             this.x45tot65.Size = new System.Drawing.Size(108, 17);
             this.x45tot65.TabIndex = 5;
-            this.x45tot65.TabStop = true;
             this.x45tot65.Text = "van 45 tot 65 jaar";
             this.x45tot65.UseVisualStyleBackColor = true;
             this.x45tot65.CheckedChanged += new System.EventHandler(this.x45tot65_CheckedChanged);
@@ -604,7 +582,6 @@
             this.x20tot25.Name = "x20tot25";
             this.x20tot25.Size = new System.Drawing.Size(108, 17);
             this.x20tot25.TabIndex = 4;
-            this.x20tot25.TabStop = true;
             this.x20tot25.Text = "van 20 tot 25 jaar";
             this.x20tot25.UseVisualStyleBackColor = true;
             this.x20tot25.CheckedChanged += new System.EventHandler(this.x20tot25_CheckedChanged);
@@ -616,7 +593,6 @@
             this.x15tot20.Name = "x15tot20";
             this.x15tot20.Size = new System.Drawing.Size(108, 17);
             this.x15tot20.TabIndex = 3;
-            this.x15tot20.TabStop = true;
             this.x15tot20.Text = "van 15 tot 20 jaar";
             this.x15tot20.UseVisualStyleBackColor = true;
             this.x15tot20.CheckedChanged += new System.EventHandler(this.x15tot20_CheckedChanged);
@@ -628,7 +604,6 @@
             this.x10tot15.Name = "x10tot15";
             this.x10tot15.Size = new System.Drawing.Size(108, 17);
             this.x10tot15.TabIndex = 2;
-            this.x10tot15.TabStop = true;
             this.x10tot15.Text = "van 10 tot 15 jaar";
             this.x10tot15.UseVisualStyleBackColor = true;
             this.x10tot15.CheckedChanged += new System.EventHandler(this.x10tot15_CheckedChanged);
@@ -640,7 +615,6 @@
             this.x5tot10.Name = "x5tot10";
             this.x5tot10.Size = new System.Drawing.Size(102, 17);
             this.x5tot10.TabIndex = 1;
-            this.x5tot10.TabStop = true;
             this.x5tot10.Text = "van 5 tot 10 jaar";
             this.x5tot10.UseVisualStyleBackColor = true;
             this.x5tot10.CheckedChanged += new System.EventHandler(this.x5tot10_CheckedChanged);
@@ -652,7 +626,6 @@
             this.xJongerDan5.Name = "xJongerDan5";
             this.xJongerDan5.Size = new System.Drawing.Size(107, 17);
             this.xJongerDan5.TabIndex = 0;
-            this.xJongerDan5.TabStop = true;
             this.xJongerDan5.Text = "Jonger dan 5 jaar";
             this.xJongerDan5.UseVisualStyleBackColor = true;
             this.xJongerDan5.CheckedChanged += new System.EventHandler(this.xJongerDan5_CheckedChanged);
@@ -672,8 +645,8 @@
             // 
             // groupBoxCrimi
             // 
-            this.groupBoxCrimi.Controls.Add(this.OverigeWetten);
             this.groupBoxCrimi.Controls.Add(this.Vermogensmisdrijven);
+            this.groupBoxCrimi.Controls.Add(this.OverigeWetten);
             this.groupBoxCrimi.Controls.Add(this.AlleMisdrijven);
             this.groupBoxCrimi.Controls.Add(this.Vernielingen);
             this.groupBoxCrimi.Controls.Add(this.Wapen);
@@ -695,7 +668,6 @@
             this.WvSr.Name = "WvSr";
             this.WvSr.Size = new System.Drawing.Size(149, 17);
             this.WvSr.TabIndex = 10;
-            this.WvSr.TabStop = true;
             this.WvSr.Text = "4 Misdrijven WvSr (overig)";
             this.WvSr.UseVisualStyleBackColor = true;
             this.WvSr.CheckedChanged += new System.EventHandler(this.WvSr_CheckedChanged);
@@ -707,7 +679,6 @@
             this.Verkeer.Name = "Verkeer";
             this.Verkeer.Size = new System.Drawing.Size(122, 17);
             this.Verkeer.TabIndex = 11;
-            this.Verkeer.TabStop = true;
             this.Verkeer.Text = "5 Verkeersmisdrijven";
             this.Verkeer.UseVisualStyleBackColor = true;
             this.Verkeer.CheckedChanged += new System.EventHandler(this.Verkeer_CheckedChanged);
@@ -744,6 +715,17 @@
             this.uitlegKnop.Text = "Uitleg";
             this.uitlegKnop.UseVisualStyleBackColor = true;
             this.uitlegKnop.Click += new System.EventHandler(this.uitlegKnop_Click);
+            // 
+            // Vermogensmisdrijven
+            // 
+            this.Vermogensmisdrijven.AutoSize = true;
+            this.Vermogensmisdrijven.Location = new System.Drawing.Point(34, 52);
+            this.Vermogensmisdrijven.Name = "Vermogensmisdrijven";
+            this.Vermogensmisdrijven.Size = new System.Drawing.Size(133, 17);
+            this.Vermogensmisdrijven.TabIndex = 15;
+            this.Vermogensmisdrijven.Text = "1 Vermogensmisdrijven";
+            this.Vermogensmisdrijven.UseVisualStyleBackColor = true;
+            this.Vermogensmisdrijven.CheckedChanged += new System.EventHandler(this.Vermogensmisdrijven_CheckedChanged);
             // 
             // Leeftijden
             // 
@@ -826,7 +808,6 @@
         private System.Windows.Forms.PictureBox linksFrieslandKaart;
         private System.Windows.Forms.PictureBox linksZeelandKaart;
         private System.Windows.Forms.RadioButton OverigeWetten;
-        private System.Windows.Forms.RadioButton Vermogensmisdrijven;
         private System.Windows.Forms.RadioButton AlleMisdrijven;
         private System.Windows.Forms.RadioButton Vernielingen;
         private System.Windows.Forms.RadioButton Wapen;
@@ -873,5 +854,6 @@
         private System.Windows.Forms.PictureBox linksOutlineKaart;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button uitlegKnop;
+        private System.Windows.Forms.RadioButton Vermogensmisdrijven;
     }
 }
