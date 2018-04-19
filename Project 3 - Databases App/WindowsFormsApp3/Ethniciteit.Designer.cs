@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rechtsLimburgKaart = new System.Windows.Forms.PictureBox();
-            this.linksNoordbKaart = new System.Windows.Forms.PictureBox();
-            this.linksLimburgKaart = new System.Windows.Forms.PictureBox();
-            this.linksGroningenKaart = new System.Windows.Forms.PictureBox();
-            this.linksGelderlandKaart = new System.Windows.Forms.PictureBox();
-            this.linksDrentheKaart = new System.Windows.Forms.PictureBox();
             this.groupBoxLeeftijden = new System.Windows.Forms.GroupBox();
             this.NonWestAllochtonen = new System.Windows.Forms.RadioButton();
-            this.TotAllochtonen = new System.Windows.Forms.RadioButton();
             this.WestAllochtonen = new System.Windows.Forms.RadioButton();
+            this.TotAllochtonen = new System.Windows.Forms.RadioButton();
             this.Autochtonen = new System.Windows.Forms.RadioButton();
             this.groupBoxCrimi = new System.Windows.Forms.GroupBox();
             this.OverigeWetten = new System.Windows.Forms.RadioButton();
@@ -49,19 +43,14 @@
             this.Drugs = new System.Windows.Forms.RadioButton();
             this.WvSr = new System.Windows.Forms.RadioButton();
             this.Verkeer = new System.Windows.Forms.RadioButton();
-            this.linksFlevolandKaart = new System.Windows.Forms.PictureBox();
-            this.linksFrieslandKaart = new System.Windows.Forms.PictureBox();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.uitlegKnop = new System.Windows.Forms.Button();
             this.linksHeleKaart = new System.Windows.Forms.PictureBox();
             this.linksZeelandKaart = new System.Windows.Forms.PictureBox();
             this.linksZuidhKaart = new System.Windows.Forms.PictureBox();
             this.linksUtrechtKaart = new System.Windows.Forms.PictureBox();
             this.linksOverijsselKaart = new System.Windows.Forms.PictureBox();
             this.linksNoordhKaart = new System.Windows.Forms.PictureBox();
-            this.rechtsGroningenKaart = new System.Windows.Forms.PictureBox();
-            this.rechtsGelderlandKaart = new System.Windows.Forms.PictureBox();
-            this.rechtsDrentheKaart = new System.Windows.Forms.PictureBox();
-            this.rechtsFlevolandKaart = new System.Windows.Forms.PictureBox();
-            this.rechtsFrieslandKaart = new System.Windows.Forms.PictureBox();
             this.rechtsHeleKaart = new System.Windows.Forms.PictureBox();
             this.rechtsZeelandKaart = new System.Windows.Forms.PictureBox();
             this.rechtsZuidhKaart = new System.Windows.Forms.PictureBox();
@@ -71,28 +60,30 @@
             this.rechtsNoordbKaart = new System.Windows.Forms.PictureBox();
             this.linksOutlineKaart = new System.Windows.Forms.PictureBox();
             this.rechtsOutlineKaart = new System.Windows.Forms.PictureBox();
-            this.BackButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsLimburgKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksNoordbKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksLimburgKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksGroningenKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksGelderlandKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksDrentheKaart)).BeginInit();
+            this.linksNoordbKaart = new System.Windows.Forms.PictureBox();
+            this.linksLimburgKaart = new System.Windows.Forms.PictureBox();
+            this.linksGroningenKaart = new System.Windows.Forms.PictureBox();
+            this.linksGelderlandKaart = new System.Windows.Forms.PictureBox();
+            this.linksDrentheKaart = new System.Windows.Forms.PictureBox();
+            this.linksFlevolandKaart = new System.Windows.Forms.PictureBox();
+            this.linksFrieslandKaart = new System.Windows.Forms.PictureBox();
+            this.rechtsLimburgKaart = new System.Windows.Forms.PictureBox();
+            this.rechtsGroningenKaart = new System.Windows.Forms.PictureBox();
+            this.rechtsGelderlandKaart = new System.Windows.Forms.PictureBox();
+            this.rechtsDrentheKaart = new System.Windows.Forms.PictureBox();
+            this.rechtsFlevolandKaart = new System.Windows.Forms.PictureBox();
+            this.rechtsFrieslandKaart = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxLeeftijden.SuspendLayout();
             this.groupBoxCrimi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.linksFlevolandKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksFrieslandKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksHeleKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksZeelandKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksZuidhKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksUtrechtKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksOverijsselKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksNoordhKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsGroningenKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsGelderlandKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsDrentheKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsFlevolandKaart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsFrieslandKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechtsHeleKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechtsZeelandKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechtsZuidhKaart)).BeginInit();
@@ -102,91 +93,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.rechtsNoordbKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksOutlineKaart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechtsOutlineKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksNoordbKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksLimburgKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksGroningenKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksGelderlandKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksDrentheKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksFlevolandKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksFrieslandKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsLimburgKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsGroningenKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsGelderlandKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsDrentheKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsFlevolandKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsFrieslandKaart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // rechtsLimburgKaart
-            // 
-            this.rechtsLimburgKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.rechtsLimburgKaart.BackColor = System.Drawing.Color.Transparent;
-            this.rechtsLimburgKaart.ErrorImage = null;
-            this.rechtsLimburgKaart.Image = global::WindowsFormsApp3.Properties.Resources.LB01;
-            this.rechtsLimburgKaart.Location = new System.Drawing.Point(1127, 25);
-            this.rechtsLimburgKaart.Name = "rechtsLimburgKaart";
-            this.rechtsLimburgKaart.Size = new System.Drawing.Size(703, 833);
-            this.rechtsLimburgKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.rechtsLimburgKaart.TabIndex = 75;
-            this.rechtsLimburgKaart.TabStop = false;
-            // 
-            // linksNoordbKaart
-            // 
-            this.linksNoordbKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.linksNoordbKaart.BackColor = System.Drawing.Color.Transparent;
-            this.linksNoordbKaart.ErrorImage = null;
-            this.linksNoordbKaart.Image = global::WindowsFormsApp3.Properties.Resources.NB01;
-            this.linksNoordbKaart.Location = new System.Drawing.Point(330, 25);
-            this.linksNoordbKaart.Name = "linksNoordbKaart";
-            this.linksNoordbKaart.Size = new System.Drawing.Size(703, 833);
-            this.linksNoordbKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.linksNoordbKaart.TabIndex = 62;
-            this.linksNoordbKaart.TabStop = false;
-            // 
-            // linksLimburgKaart
-            // 
-            this.linksLimburgKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.linksLimburgKaart.BackColor = System.Drawing.Color.Transparent;
-            this.linksLimburgKaart.ErrorImage = null;
-            this.linksLimburgKaart.Image = global::WindowsFormsApp3.Properties.Resources.LB01;
-            this.linksLimburgKaart.Location = new System.Drawing.Point(330, 25);
-            this.linksLimburgKaart.Name = "linksLimburgKaart";
-            this.linksLimburgKaart.Size = new System.Drawing.Size(703, 833);
-            this.linksLimburgKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.linksLimburgKaart.TabIndex = 61;
-            this.linksLimburgKaart.TabStop = false;
-            // 
-            // linksGroningenKaart
-            // 
-            this.linksGroningenKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.linksGroningenKaart.BackColor = System.Drawing.Color.Transparent;
-            this.linksGroningenKaart.ErrorImage = null;
-            this.linksGroningenKaart.Image = global::WindowsFormsApp3.Properties.Resources.GR01;
-            this.linksGroningenKaart.Location = new System.Drawing.Point(330, 25);
-            this.linksGroningenKaart.Name = "linksGroningenKaart";
-            this.linksGroningenKaart.Size = new System.Drawing.Size(703, 833);
-            this.linksGroningenKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.linksGroningenKaart.TabIndex = 60;
-            this.linksGroningenKaart.TabStop = false;
-            // 
-            // linksGelderlandKaart
-            // 
-            this.linksGelderlandKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.linksGelderlandKaart.BackColor = System.Drawing.Color.Transparent;
-            this.linksGelderlandKaart.ErrorImage = null;
-            this.linksGelderlandKaart.Image = global::WindowsFormsApp3.Properties.Resources.GL01;
-            this.linksGelderlandKaart.Location = new System.Drawing.Point(330, 25);
-            this.linksGelderlandKaart.Name = "linksGelderlandKaart";
-            this.linksGelderlandKaart.Size = new System.Drawing.Size(703, 833);
-            this.linksGelderlandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.linksGelderlandKaart.TabIndex = 59;
-            this.linksGelderlandKaart.TabStop = false;
-            // 
-            // linksDrentheKaart
-            // 
-            this.linksDrentheKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.linksDrentheKaart.BackColor = System.Drawing.Color.Transparent;
-            this.linksDrentheKaart.ErrorImage = null;
-            this.linksDrentheKaart.Image = global::WindowsFormsApp3.Properties.Resources.DR01;
-            this.linksDrentheKaart.Location = new System.Drawing.Point(330, 25);
-            this.linksDrentheKaart.Name = "linksDrentheKaart";
-            this.linksDrentheKaart.Size = new System.Drawing.Size(703, 833);
-            this.linksDrentheKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.linksDrentheKaart.TabIndex = 58;
-            this.linksDrentheKaart.TabStop = false;
             // 
             // groupBoxLeeftijden
             // 
             this.groupBoxLeeftijden.Controls.Add(this.NonWestAllochtonen);
-            this.groupBoxLeeftijden.Controls.Add(this.TotAllochtonen);
             this.groupBoxLeeftijden.Controls.Add(this.WestAllochtonen);
+            this.groupBoxLeeftijden.Controls.Add(this.TotAllochtonen);
             this.groupBoxLeeftijden.Controls.Add(this.Autochtonen);
             this.groupBoxLeeftijden.Location = new System.Drawing.Point(1161, 870);
             this.groupBoxLeeftijden.Name = "groupBoxLeeftijden";
@@ -198,42 +125,46 @@
             // NonWestAllochtonen
             // 
             this.NonWestAllochtonen.AutoSize = true;
-            this.NonWestAllochtonen.Location = new System.Drawing.Point(306, 73);
+            this.NonWestAllochtonen.Location = new System.Drawing.Point(399, 75);
             this.NonWestAllochtonen.Name = "NonWestAllochtonen";
-            this.NonWestAllochtonen.Size = new System.Drawing.Size(151, 17);
+            this.NonWestAllochtonen.Size = new System.Drawing.Size(150, 17);
             this.NonWestAllochtonen.TabIndex = 3;
-            this.NonWestAllochtonen.Text = "Niet Westerse Allochtonen";
+            this.NonWestAllochtonen.Text = "Niet Westerse allochtonen";
             this.NonWestAllochtonen.UseVisualStyleBackColor = true;
-            // 
-            // TotAllochtonen
-            // 
-            this.TotAllochtonen.AutoSize = true;
-            this.TotAllochtonen.Location = new System.Drawing.Point(6, 73);
-            this.TotAllochtonen.Name = "TotAllochtonen";
-            this.TotAllochtonen.Size = new System.Drawing.Size(114, 17);
-            this.TotAllochtonen.TabIndex = 2;
-            this.TotAllochtonen.Text = "Totaal Allochtonen";
-            this.TotAllochtonen.UseVisualStyleBackColor = true;
+            this.NonWestAllochtonen.CheckedChanged += new System.EventHandler(this.NonWestAllochtonen_CheckedChanged);
             // 
             // WestAllochtonen
             // 
             this.WestAllochtonen.AutoSize = true;
-            this.WestAllochtonen.Location = new System.Drawing.Point(306, 29);
+            this.WestAllochtonen.Location = new System.Drawing.Point(399, 29);
             this.WestAllochtonen.Name = "WestAllochtonen";
-            this.WestAllochtonen.Size = new System.Drawing.Size(129, 17);
-            this.WestAllochtonen.TabIndex = 1;
-            this.WestAllochtonen.Text = "Westerse Allochtonen";
+            this.WestAllochtonen.Size = new System.Drawing.Size(128, 17);
+            this.WestAllochtonen.TabIndex = 2;
+            this.WestAllochtonen.Text = "Westerse allochtonen";
             this.WestAllochtonen.UseVisualStyleBackColor = true;
+            this.WestAllochtonen.CheckedChanged += new System.EventHandler(this.WestAllochtonen_CheckedChanged);
+            // 
+            // TotAllochtonen
+            // 
+            this.TotAllochtonen.AutoSize = true;
+            this.TotAllochtonen.Location = new System.Drawing.Point(28, 75);
+            this.TotAllochtonen.Name = "TotAllochtonen";
+            this.TotAllochtonen.Size = new System.Drawing.Size(100, 17);
+            this.TotAllochtonen.TabIndex = 1;
+            this.TotAllochtonen.Text = "Alle allochtonen";
+            this.TotAllochtonen.UseVisualStyleBackColor = true;
+            this.TotAllochtonen.CheckedChanged += new System.EventHandler(this.TotAllochtonen_CheckedChanged);
             // 
             // Autochtonen
             // 
             this.Autochtonen.AutoSize = true;
-            this.Autochtonen.Location = new System.Drawing.Point(6, 29);
+            this.Autochtonen.Location = new System.Drawing.Point(28, 29);
             this.Autochtonen.Name = "Autochtonen";
             this.Autochtonen.Size = new System.Drawing.Size(86, 17);
             this.Autochtonen.TabIndex = 0;
             this.Autochtonen.Text = "Autochtonen";
             this.Autochtonen.UseVisualStyleBackColor = true;
+            this.Autochtonen.CheckedChanged += new System.EventHandler(this.Autochtonen_CheckedChanged);
             // 
             // groupBoxCrimi
             // 
@@ -352,30 +283,25 @@
             this.Verkeer.UseVisualStyleBackColor = true;
             this.Verkeer.CheckedChanged += new System.EventHandler(this.Verkeer_CheckedChanged);
             // 
-            // linksFlevolandKaart
+            // BackButton
             // 
-            this.linksFlevolandKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.linksFlevolandKaart.BackColor = System.Drawing.Color.Transparent;
-            this.linksFlevolandKaart.ErrorImage = null;
-            this.linksFlevolandKaart.Image = global::WindowsFormsApp3.Properties.Resources.FL01;
-            this.linksFlevolandKaart.Location = new System.Drawing.Point(330, 25);
-            this.linksFlevolandKaart.Name = "linksFlevolandKaart";
-            this.linksFlevolandKaart.Size = new System.Drawing.Size(703, 833);
-            this.linksFlevolandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.linksFlevolandKaart.TabIndex = 57;
-            this.linksFlevolandKaart.TabStop = false;
+            this.BackButton.Location = new System.Drawing.Point(57, 25);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(216, 63);
+            this.BackButton.TabIndex = 86;
+            this.BackButton.Text = "Terug naar het hoofdscherm";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // linksFrieslandKaart
+            // uitlegKnop
             // 
-            this.linksFrieslandKaart.BackColor = System.Drawing.Color.Transparent;
-            this.linksFrieslandKaart.ErrorImage = null;
-            this.linksFrieslandKaart.Image = global::WindowsFormsApp3.Properties.Resources.FR01;
-            this.linksFrieslandKaart.Location = new System.Drawing.Point(330, 25);
-            this.linksFrieslandKaart.Name = "linksFrieslandKaart";
-            this.linksFrieslandKaart.Size = new System.Drawing.Size(703, 833);
-            this.linksFrieslandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.linksFrieslandKaart.TabIndex = 56;
-            this.linksFrieslandKaart.TabStop = false;
+            this.uitlegKnop.Location = new System.Drawing.Point(57, 153);
+            this.uitlegKnop.Name = "uitlegKnop";
+            this.uitlegKnop.Size = new System.Drawing.Size(216, 63);
+            this.uitlegKnop.TabIndex = 115;
+            this.uitlegKnop.Text = "Uitleg";
+            this.uitlegKnop.UseVisualStyleBackColor = true;
+            this.uitlegKnop.Click += new System.EventHandler(this.uitlegKnop_Click);
             // 
             // linksHeleKaart
             // 
@@ -455,70 +381,6 @@
             this.linksNoordhKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.linksNoordhKaart.TabIndex = 63;
             this.linksNoordhKaart.TabStop = false;
-            // 
-            // rechtsGroningenKaart
-            // 
-            this.rechtsGroningenKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.rechtsGroningenKaart.BackColor = System.Drawing.Color.Transparent;
-            this.rechtsGroningenKaart.ErrorImage = null;
-            this.rechtsGroningenKaart.Image = global::WindowsFormsApp3.Properties.Resources.GR01;
-            this.rechtsGroningenKaart.Location = new System.Drawing.Point(1127, 25);
-            this.rechtsGroningenKaart.Name = "rechtsGroningenKaart";
-            this.rechtsGroningenKaart.Size = new System.Drawing.Size(703, 833);
-            this.rechtsGroningenKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.rechtsGroningenKaart.TabIndex = 74;
-            this.rechtsGroningenKaart.TabStop = false;
-            // 
-            // rechtsGelderlandKaart
-            // 
-            this.rechtsGelderlandKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.rechtsGelderlandKaart.BackColor = System.Drawing.Color.Transparent;
-            this.rechtsGelderlandKaart.ErrorImage = null;
-            this.rechtsGelderlandKaart.Image = global::WindowsFormsApp3.Properties.Resources.GL01;
-            this.rechtsGelderlandKaart.Location = new System.Drawing.Point(1127, 25);
-            this.rechtsGelderlandKaart.Name = "rechtsGelderlandKaart";
-            this.rechtsGelderlandKaart.Size = new System.Drawing.Size(703, 833);
-            this.rechtsGelderlandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.rechtsGelderlandKaart.TabIndex = 73;
-            this.rechtsGelderlandKaart.TabStop = false;
-            // 
-            // rechtsDrentheKaart
-            // 
-            this.rechtsDrentheKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.rechtsDrentheKaart.BackColor = System.Drawing.Color.Transparent;
-            this.rechtsDrentheKaart.ErrorImage = null;
-            this.rechtsDrentheKaart.Image = global::WindowsFormsApp3.Properties.Resources.DR01;
-            this.rechtsDrentheKaart.Location = new System.Drawing.Point(1127, 25);
-            this.rechtsDrentheKaart.Name = "rechtsDrentheKaart";
-            this.rechtsDrentheKaart.Size = new System.Drawing.Size(703, 833);
-            this.rechtsDrentheKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.rechtsDrentheKaart.TabIndex = 72;
-            this.rechtsDrentheKaart.TabStop = false;
-            // 
-            // rechtsFlevolandKaart
-            // 
-            this.rechtsFlevolandKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.rechtsFlevolandKaart.BackColor = System.Drawing.Color.Transparent;
-            this.rechtsFlevolandKaart.ErrorImage = null;
-            this.rechtsFlevolandKaart.Image = global::WindowsFormsApp3.Properties.Resources.FL01;
-            this.rechtsFlevolandKaart.Location = new System.Drawing.Point(1127, 25);
-            this.rechtsFlevolandKaart.Name = "rechtsFlevolandKaart";
-            this.rechtsFlevolandKaart.Size = new System.Drawing.Size(703, 833);
-            this.rechtsFlevolandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.rechtsFlevolandKaart.TabIndex = 71;
-            this.rechtsFlevolandKaart.TabStop = false;
-            // 
-            // rechtsFrieslandKaart
-            // 
-            this.rechtsFrieslandKaart.BackColor = System.Drawing.Color.Transparent;
-            this.rechtsFrieslandKaart.ErrorImage = null;
-            this.rechtsFrieslandKaart.Image = global::WindowsFormsApp3.Properties.Resources.FR01;
-            this.rechtsFrieslandKaart.Location = new System.Drawing.Point(1127, 25);
-            this.rechtsFrieslandKaart.Name = "rechtsFrieslandKaart";
-            this.rechtsFrieslandKaart.Size = new System.Drawing.Size(703, 833);
-            this.rechtsFrieslandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.rechtsFrieslandKaart.TabIndex = 70;
-            this.rechtsFrieslandKaart.TabStop = false;
             // 
             // rechtsHeleKaart
             // 
@@ -637,21 +499,210 @@
             this.rechtsOutlineKaart.TabIndex = 83;
             this.rechtsOutlineKaart.TabStop = false;
             // 
-            // BackButton
+            // linksNoordbKaart
             // 
-            this.BackButton.Location = new System.Drawing.Point(57, 25);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(216, 63);
-            this.BackButton.TabIndex = 86;
-            this.BackButton.Text = "Back to main screen";
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.linksNoordbKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.linksNoordbKaart.BackColor = System.Drawing.Color.Transparent;
+            this.linksNoordbKaart.ErrorImage = null;
+            this.linksNoordbKaart.Image = global::WindowsFormsApp3.Properties.Resources.NB01;
+            this.linksNoordbKaart.Location = new System.Drawing.Point(330, 25);
+            this.linksNoordbKaart.Name = "linksNoordbKaart";
+            this.linksNoordbKaart.Size = new System.Drawing.Size(703, 833);
+            this.linksNoordbKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.linksNoordbKaart.TabIndex = 62;
+            this.linksNoordbKaart.TabStop = false;
+            // 
+            // linksLimburgKaart
+            // 
+            this.linksLimburgKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.linksLimburgKaart.BackColor = System.Drawing.Color.Transparent;
+            this.linksLimburgKaart.ErrorImage = null;
+            this.linksLimburgKaart.Image = global::WindowsFormsApp3.Properties.Resources.LB01;
+            this.linksLimburgKaart.Location = new System.Drawing.Point(330, 25);
+            this.linksLimburgKaart.Name = "linksLimburgKaart";
+            this.linksLimburgKaart.Size = new System.Drawing.Size(703, 833);
+            this.linksLimburgKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.linksLimburgKaart.TabIndex = 61;
+            this.linksLimburgKaart.TabStop = false;
+            // 
+            // linksGroningenKaart
+            // 
+            this.linksGroningenKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.linksGroningenKaart.BackColor = System.Drawing.Color.Transparent;
+            this.linksGroningenKaart.ErrorImage = null;
+            this.linksGroningenKaart.Image = global::WindowsFormsApp3.Properties.Resources.GR01;
+            this.linksGroningenKaart.Location = new System.Drawing.Point(330, 25);
+            this.linksGroningenKaart.Name = "linksGroningenKaart";
+            this.linksGroningenKaart.Size = new System.Drawing.Size(703, 833);
+            this.linksGroningenKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.linksGroningenKaart.TabIndex = 60;
+            this.linksGroningenKaart.TabStop = false;
+            // 
+            // linksGelderlandKaart
+            // 
+            this.linksGelderlandKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.linksGelderlandKaart.BackColor = System.Drawing.Color.Transparent;
+            this.linksGelderlandKaart.ErrorImage = null;
+            this.linksGelderlandKaart.Image = global::WindowsFormsApp3.Properties.Resources.GL01;
+            this.linksGelderlandKaart.Location = new System.Drawing.Point(330, 25);
+            this.linksGelderlandKaart.Name = "linksGelderlandKaart";
+            this.linksGelderlandKaart.Size = new System.Drawing.Size(703, 833);
+            this.linksGelderlandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.linksGelderlandKaart.TabIndex = 59;
+            this.linksGelderlandKaart.TabStop = false;
+            // 
+            // linksDrentheKaart
+            // 
+            this.linksDrentheKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.linksDrentheKaart.BackColor = System.Drawing.Color.Transparent;
+            this.linksDrentheKaart.ErrorImage = null;
+            this.linksDrentheKaart.Image = global::WindowsFormsApp3.Properties.Resources.DR01;
+            this.linksDrentheKaart.Location = new System.Drawing.Point(330, 25);
+            this.linksDrentheKaart.Name = "linksDrentheKaart";
+            this.linksDrentheKaart.Size = new System.Drawing.Size(703, 833);
+            this.linksDrentheKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.linksDrentheKaart.TabIndex = 58;
+            this.linksDrentheKaart.TabStop = false;
+            // 
+            // linksFlevolandKaart
+            // 
+            this.linksFlevolandKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.linksFlevolandKaart.BackColor = System.Drawing.Color.Transparent;
+            this.linksFlevolandKaart.ErrorImage = null;
+            this.linksFlevolandKaart.Image = global::WindowsFormsApp3.Properties.Resources.FL01;
+            this.linksFlevolandKaart.Location = new System.Drawing.Point(330, 25);
+            this.linksFlevolandKaart.Name = "linksFlevolandKaart";
+            this.linksFlevolandKaart.Size = new System.Drawing.Size(703, 833);
+            this.linksFlevolandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.linksFlevolandKaart.TabIndex = 57;
+            this.linksFlevolandKaart.TabStop = false;
+            // 
+            // linksFrieslandKaart
+            // 
+            this.linksFrieslandKaart.BackColor = System.Drawing.Color.Transparent;
+            this.linksFrieslandKaart.ErrorImage = null;
+            this.linksFrieslandKaart.Image = global::WindowsFormsApp3.Properties.Resources.FR01;
+            this.linksFrieslandKaart.Location = new System.Drawing.Point(330, 25);
+            this.linksFrieslandKaart.Name = "linksFrieslandKaart";
+            this.linksFrieslandKaart.Size = new System.Drawing.Size(703, 833);
+            this.linksFrieslandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.linksFrieslandKaart.TabIndex = 56;
+            this.linksFrieslandKaart.TabStop = false;
+            // 
+            // rechtsLimburgKaart
+            // 
+            this.rechtsLimburgKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.rechtsLimburgKaart.BackColor = System.Drawing.Color.Transparent;
+            this.rechtsLimburgKaart.ErrorImage = null;
+            this.rechtsLimburgKaart.Image = global::WindowsFormsApp3.Properties.Resources.LB01;
+            this.rechtsLimburgKaart.Location = new System.Drawing.Point(1127, 25);
+            this.rechtsLimburgKaart.Name = "rechtsLimburgKaart";
+            this.rechtsLimburgKaart.Size = new System.Drawing.Size(703, 833);
+            this.rechtsLimburgKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rechtsLimburgKaart.TabIndex = 75;
+            this.rechtsLimburgKaart.TabStop = false;
+            // 
+            // rechtsGroningenKaart
+            // 
+            this.rechtsGroningenKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.rechtsGroningenKaart.BackColor = System.Drawing.Color.Transparent;
+            this.rechtsGroningenKaart.ErrorImage = null;
+            this.rechtsGroningenKaart.Image = global::WindowsFormsApp3.Properties.Resources.GR01;
+            this.rechtsGroningenKaart.Location = new System.Drawing.Point(1127, 25);
+            this.rechtsGroningenKaart.Name = "rechtsGroningenKaart";
+            this.rechtsGroningenKaart.Size = new System.Drawing.Size(703, 833);
+            this.rechtsGroningenKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rechtsGroningenKaart.TabIndex = 74;
+            this.rechtsGroningenKaart.TabStop = false;
+            // 
+            // rechtsGelderlandKaart
+            // 
+            this.rechtsGelderlandKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.rechtsGelderlandKaart.BackColor = System.Drawing.Color.Transparent;
+            this.rechtsGelderlandKaart.ErrorImage = null;
+            this.rechtsGelderlandKaart.Image = global::WindowsFormsApp3.Properties.Resources.GL01;
+            this.rechtsGelderlandKaart.Location = new System.Drawing.Point(1127, 25);
+            this.rechtsGelderlandKaart.Name = "rechtsGelderlandKaart";
+            this.rechtsGelderlandKaart.Size = new System.Drawing.Size(703, 833);
+            this.rechtsGelderlandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rechtsGelderlandKaart.TabIndex = 73;
+            this.rechtsGelderlandKaart.TabStop = false;
+            // 
+            // rechtsDrentheKaart
+            // 
+            this.rechtsDrentheKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.rechtsDrentheKaart.BackColor = System.Drawing.Color.Transparent;
+            this.rechtsDrentheKaart.ErrorImage = null;
+            this.rechtsDrentheKaart.Image = global::WindowsFormsApp3.Properties.Resources.DR01;
+            this.rechtsDrentheKaart.Location = new System.Drawing.Point(1127, 25);
+            this.rechtsDrentheKaart.Name = "rechtsDrentheKaart";
+            this.rechtsDrentheKaart.Size = new System.Drawing.Size(703, 833);
+            this.rechtsDrentheKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rechtsDrentheKaart.TabIndex = 72;
+            this.rechtsDrentheKaart.TabStop = false;
+            // 
+            // rechtsFlevolandKaart
+            // 
+            this.rechtsFlevolandKaart.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.rechtsFlevolandKaart.BackColor = System.Drawing.Color.Transparent;
+            this.rechtsFlevolandKaart.ErrorImage = null;
+            this.rechtsFlevolandKaart.Image = global::WindowsFormsApp3.Properties.Resources.FL01;
+            this.rechtsFlevolandKaart.Location = new System.Drawing.Point(1127, 25);
+            this.rechtsFlevolandKaart.Name = "rechtsFlevolandKaart";
+            this.rechtsFlevolandKaart.Size = new System.Drawing.Size(703, 833);
+            this.rechtsFlevolandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rechtsFlevolandKaart.TabIndex = 71;
+            this.rechtsFlevolandKaart.TabStop = false;
+            // 
+            // rechtsFrieslandKaart
+            // 
+            this.rechtsFrieslandKaart.BackColor = System.Drawing.Color.Transparent;
+            this.rechtsFrieslandKaart.ErrorImage = null;
+            this.rechtsFrieslandKaart.Image = global::WindowsFormsApp3.Properties.Resources.FR01;
+            this.rechtsFrieslandKaart.Location = new System.Drawing.Point(1127, 25);
+            this.rechtsFrieslandKaart.Name = "rechtsFrieslandKaart";
+            this.rechtsFrieslandKaart.Size = new System.Drawing.Size(703, 833);
+            this.rechtsFrieslandKaart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rechtsFrieslandKaart.TabIndex = 70;
+            this.rechtsFrieslandKaart.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp3.Properties.Resources.LegendaBar;
+            this.pictureBox1.InitialImage = global::WindowsFormsApp3.Properties.Resources.LegendaBar;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 258);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 600);
+            this.pictureBox1.TabIndex = 119;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(150, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 120;
+            this.label1.Text = "Meeste";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(150, 845);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 121;
+            this.label2.Text = "Minste";
             // 
             // Ethniciteit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1964, 981);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.uitlegKnop);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.groupBoxLeeftijden);
             this.Controls.Add(this.groupBoxCrimi);
@@ -685,29 +736,16 @@
             this.Controls.Add(this.rechtsFrieslandKaart);
             this.Name = "Ethniciteit";
             this.Text = "Ethniciteit";
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsLimburgKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksNoordbKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksLimburgKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksGroningenKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksGelderlandKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksDrentheKaart)).EndInit();
             this.groupBoxLeeftijden.ResumeLayout(false);
             this.groupBoxLeeftijden.PerformLayout();
             this.groupBoxCrimi.ResumeLayout(false);
             this.groupBoxCrimi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.linksFlevolandKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linksFrieslandKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksHeleKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksZeelandKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksZuidhKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksUtrechtKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksOverijsselKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksNoordhKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsGroningenKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsGelderlandKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsDrentheKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsFlevolandKaart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechtsFrieslandKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechtsHeleKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechtsZeelandKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechtsZuidhKaart)).EndInit();
@@ -717,6 +755,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.rechtsNoordbKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linksOutlineKaart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechtsOutlineKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksNoordbKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksLimburgKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksGroningenKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksGelderlandKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksDrentheKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksFlevolandKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linksFrieslandKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsLimburgKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsGroningenKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsGelderlandKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsDrentheKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsFlevolandKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechtsFrieslandKaart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -731,9 +783,6 @@
         private System.Windows.Forms.PictureBox linksGelderlandKaart;
         private System.Windows.Forms.PictureBox linksDrentheKaart;
         private System.Windows.Forms.GroupBox groupBoxLeeftijden;
-        private System.Windows.Forms.RadioButton TotAllochtonen;
-        private System.Windows.Forms.RadioButton WestAllochtonen;
-        private System.Windows.Forms.RadioButton Autochtonen;
         private System.Windows.Forms.GroupBox groupBoxCrimi;
         private System.Windows.Forms.RadioButton OverigeWetten;
         private System.Windows.Forms.RadioButton Vermogensmisdrijven;
@@ -766,7 +815,14 @@
         private System.Windows.Forms.PictureBox rechtsNoordbKaart;
         private System.Windows.Forms.PictureBox linksOutlineKaart;
         private System.Windows.Forms.PictureBox rechtsOutlineKaart;
-        private System.Windows.Forms.RadioButton NonWestAllochtonen;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button uitlegKnop;
+        private System.Windows.Forms.RadioButton NonWestAllochtonen;
+        private System.Windows.Forms.RadioButton WestAllochtonen;
+        private System.Windows.Forms.RadioButton TotAllochtonen;
+        private System.Windows.Forms.RadioButton Autochtonen;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

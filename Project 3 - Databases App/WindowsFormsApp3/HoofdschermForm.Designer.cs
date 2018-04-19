@@ -45,23 +45,23 @@
             // CrimiVSGrond
             // 
             this.CrimiVSGrond.BackColor = System.Drawing.SystemColors.Control;
-            this.CrimiVSGrond.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.aceon6jBi;
-            this.CrimiVSGrond.Location = new System.Drawing.Point(727, 487);
+            this.CrimiVSGrond.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrimiVSGrond.Location = new System.Drawing.Point(704, 280);
             this.CrimiVSGrond.Name = "CrimiVSGrond";
             this.CrimiVSGrond.Size = new System.Drawing.Size(512, 512);
             this.CrimiVSGrond.TabIndex = 0;
-            this.CrimiVSGrond.Text = "Criminaliteit versus Landbouw/Grondbouw";
-            this.CrimiVSGrond.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.CrimiVSGrond.Text = "Criminaliteit\r\n\r\nversus\r\n\r\nLandbouw/Grondbouw";
             this.CrimiVSGrond.UseVisualStyleBackColor = true;
             this.CrimiVSGrond.Click += new System.EventHandler(this.CrimiVSGrond_Click);
             // 
             // CrimiVSAfkomst
             // 
-            this.CrimiVSAfkomst.Location = new System.Drawing.Point(171, 487);
+            this.CrimiVSAfkomst.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrimiVSAfkomst.Location = new System.Drawing.Point(64, 280);
             this.CrimiVSAfkomst.Name = "CrimiVSAfkomst";
             this.CrimiVSAfkomst.Size = new System.Drawing.Size(512, 512);
             this.CrimiVSAfkomst.TabIndex = 2;
-            this.CrimiVSAfkomst.Text = "Criminaliteit versus Afkomst/Ethniciteit";
+            this.CrimiVSAfkomst.Text = "Criminaliteit\r\n\r\nversus\r\n\r\nAfkomst/Ethniciteit";
             this.CrimiVSAfkomst.UseVisualStyleBackColor = true;
             this.CrimiVSAfkomst.Click += new System.EventHandler(this.CrimiVSAfkomst_Click);
             // 
@@ -82,11 +82,12 @@
             // 
             // crimiVsLeeftijdKnop
             // 
-            this.crimiVsLeeftijdKnop.Location = new System.Drawing.Point(1311, 496);
+            this.crimiVsLeeftijdKnop.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crimiVsLeeftijdKnop.Location = new System.Drawing.Point(1344, 280);
             this.crimiVsLeeftijdKnop.Name = "crimiVsLeeftijdKnop";
             this.crimiVsLeeftijdKnop.Size = new System.Drawing.Size(512, 512);
             this.crimiVsLeeftijdKnop.TabIndex = 4;
-            this.crimiVsLeeftijdKnop.Text = "Criminaliteit versus Leeftijd";
+            this.crimiVsLeeftijdKnop.Text = "Criminaliteit\r\n\r\nversus\r\n\r\nLeeftijd";
             this.crimiVsLeeftijdKnop.UseVisualStyleBackColor = true;
             this.crimiVsLeeftijdKnop.Click += new System.EventHandler(this.crimiVsLeeftijdKnop_Click);
             // 

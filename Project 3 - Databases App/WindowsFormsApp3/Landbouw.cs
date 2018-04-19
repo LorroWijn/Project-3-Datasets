@@ -251,7 +251,7 @@ namespace WindowsFormsApp3
         {
             SqlConnection dbConnection = new SqlConnection(Constants.connectionString);
             dbConnection.Open();
-            SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY c.tot_regis_mis DESC, m.misdrijfnaam, p.prov_naam), m.misdrijfnaam, c.tot_regis_mis, p.prov_naam
+            SqlCommand queryMisdaden = new SqlCommand(@"SELECT ROW_NUMBER() OVER(ORDER BY p.prov_naam, c.tot_regis_mis DESC, m.misdrijfnaam), m.misdrijfnaam, c.tot_regis_mis, p.prov_naam
                                                                     FROM misdrijf as m, provincie as p, crimi as c
                                                                     WHERE m.misdrijf_id = c.misdrijf_id
                                                                     AND p.prov_id = c.prov_id
@@ -356,6 +356,12 @@ namespace WindowsFormsApp3
         private void linksHeleKaart_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void uitlegKnop_Click(object sender, EventArgs e)
+        {
+            Tutorial form4 = new Tutorial();
+            form4.ShowDialog();
         }
     }
 }

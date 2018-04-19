@@ -40,3 +40,4 @@ C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Database
 C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\Project 3 - Databases application.csproj.CoreCompileInputs.cache
 C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\loren\OneDrive\Documents\GitHub\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Tutorial.resources
