@@ -1,0 +1,31 @@
+#1: Open de .sln applicatie
+#2: Open de server explorer
+#3: klap dataconnections open en druk met rechtermuisknop op: "Database for project 3 - Databases"
+#4: Klik op properties
+#5: Bij properties, kopieer de hele 'Connection string'
+#6: Open nu Provincie.cs
+#7: Bij de "public static class Constants" staat er een "public const string connectionString", hierachter staat de dataconnection die je moet aanpassen.
+#8: Neem alles tussen de haakjes(zonder de haakjes zelf meetenemen) en vervang deze met de net gekopieerde 'Connection string'.
+#9: Zorg ervoor dat alles tussen de aanhalingstekens zelf geen dubbele aanhalingstekens heeft maar dat deze enkele gebruiken.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#9 - Voorbeeld
+Mijn connection string: Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf";Integrated Security=True
+
+Als ik deze connectionstring erin stop dan wordt het dit:
+
+public const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf";Integrated Security=True";
+
+
+Hier gaat het verkeerd omdat bij: ("D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf") dit gedeelte er dubbele aanhalingstekens staan.
+verander dit naar: ('D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf')
+
+Uiteindelijk wordt het dan deze string:
+public const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\Github\Project-3-Datasets\Project 3 - Databases App\WindowsFormsApp3\Database for project 3 - Databases.mdf';Integrated Security=True";
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Dit werkt nu, hopelijk werkt het ook voor jullie!
