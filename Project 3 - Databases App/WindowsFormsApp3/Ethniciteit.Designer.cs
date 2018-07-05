@@ -120,7 +120,7 @@
             this.groupBoxLeeftijden.Size = new System.Drawing.Size(635, 104);
             this.groupBoxLeeftijden.TabIndex = 55;
             this.groupBoxLeeftijden.TabStop = false;
-            this.groupBoxLeeftijden.Text = "Leeftijden";
+            this.groupBoxLeeftijden.Text = "Ethniciteiten";
             // 
             // NonWestAllochtonen
             // 
@@ -698,7 +698,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1964, 981);
+            this.ClientSize = new System.Drawing.Size(1924, 981);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
